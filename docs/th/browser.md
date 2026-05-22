@@ -104,7 +104,7 @@
 
 เปิดเบราว์เซอร์ด้วย profile ที่ตั้งไว้
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.Open(): boolean
@@ -118,7 +118,7 @@ c.Open(): boolean
 
 ปิดเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.Close(): boolean
@@ -132,7 +132,7 @@ c.Close(): boolean
 
 ตรวจสอบว่าเบราว์เซอร์ปิดอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.IsClosed(): boolean
@@ -146,7 +146,7 @@ c.IsClosed(): boolean
 
 ดึงขนาดหน้าต่างเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetSize(): string
@@ -160,7 +160,7 @@ c.GetSize(): string
 
 ตั้งขนาดหน้าต่างเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SetSize(width: number, height: number): boolean
@@ -181,7 +181,7 @@ c.SetSize(width: number, height: number): boolean
 
 คืนค่าขนาดเดิมของหน้าต่างเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.RestoreSize(): boolean
@@ -195,7 +195,7 @@ c.RestoreSize(): boolean
 
 ดึงตำแหน่งของหน้าต่างเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetPosition(): string
@@ -209,7 +209,7 @@ c.GetPosition(): string
 
 ตั้งตำแหน่งของหน้าต่างเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SetPosition(x: number, y: number): boolean
@@ -230,7 +230,7 @@ c.SetPosition(x: number, y: number): boolean
 
 คืนค่าตำแหน่งเดิมของหน้าต่างเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.RestorePosition(): boolean
@@ -246,7 +246,7 @@ c.RestorePosition(): boolean
 
 นำทางไปยัง URL
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GotoUrl(url: string): boolean
@@ -266,7 +266,7 @@ c.GotoUrl(url: string): boolean
 
 ดึง URL ของหน้าปัจจุบัน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetUrl(): string
@@ -280,7 +280,7 @@ c.GetUrl(): string
 
 รอจนกว่า URL จะต่างจาก `currentUrl` หรือ timeout
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.WaitUrlChanged(currentUrl: string, timeout: number): boolean
@@ -301,7 +301,7 @@ c.WaitUrlChanged(currentUrl: string, timeout: number): boolean
 
 ย้อนกลับใน history เบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.Back(count: number): void
@@ -319,7 +319,7 @@ c.Back(count: number): void
 
 รีเฟรชหน้าปัจจุบัน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.Refresh(): void
@@ -329,9 +329,9 @@ c.Refresh(): void
 
 ### c.NewTab
 
-เปิด tab ใหม่ สลับ focus ไปที่นั้น และทางเลือกในการนำทางไป `url` (W3C /window/new ไม่สลับอัตโนมัติ — implementation แยก handle ใหม่และสลับเอง)
+เปิด tab ใหม่ สลับ focus ไปที่นั้น และจะนำทางไป `url` หากระบุ (W3C /window/new ไม่สลับอัตโนมัติ — implementation แยก handle ใหม่และสลับเอง)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.NewTab(url?: string): boolean
@@ -351,7 +351,7 @@ c.NewTab(url?: string): boolean
 
 สลับ focus ไปยัง tab ตาม index (0-based) ในรายการ window handle ปัจจุบัน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ActiveTab(index: number): boolean
@@ -371,7 +371,7 @@ c.ActiveTab(index: number): boolean
 
 ปิด tab ที่ focus อยู่ หลังจากปิดจะสลับกลับไป tab[0] ถ้ายังเหลือ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.CloseTab(): boolean
@@ -385,7 +385,7 @@ c.CloseTab(): boolean
 
 ปิด tab อื่นทั้งหมด เก็บ tab ที่ focus อยู่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.CloseOtherTabs(): boolean
@@ -399,7 +399,7 @@ c.CloseOtherTabs(): boolean
 
 สลับเข้า iframe ตาม index (string ตัวเลข) หรือ selector (xpath/css)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SwitchFrame(selector: string): boolean
@@ -419,7 +419,7 @@ c.SwitchFrame(selector: string): boolean
 
 ค้นหา popup ตาม title แล้วสลับ focus ไปที่นั้น วน window handle ทั้งหมด สลับและเทียบ title === input
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SwitchPopup(title: string): boolean
@@ -439,7 +439,7 @@ c.SwitchPopup(title: string): boolean
 
 ออกจาก nested frame ทั้งหมดกลับไป document ระดับบน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SwitchDefaultFrame(): boolean
@@ -453,7 +453,7 @@ c.SwitchDefaultFrame(): boolean
 
 สลับกลับไป frame แม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SwitchParentFrame(): boolean
@@ -467,7 +467,7 @@ c.SwitchParentFrame(): boolean
 
 ยอมรับ alert dialog (กด OK)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.AcceptAlert(): boolean
@@ -481,7 +481,7 @@ c.AcceptAlert(): boolean
 
 ยกเลิก alert dialog (กด Cancel)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.CancelAlert(): boolean
@@ -495,7 +495,7 @@ c.CancelAlert(): boolean
 
 ดึง source HTML ของหน้า
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetPageSource(): string
@@ -511,7 +511,7 @@ c.GetPageSource(): string
 
 ตรวจสอบว่า element มีอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ExistElement(selector: string, timeout?: number): boolean
@@ -532,7 +532,7 @@ c.ExistElement(selector: string, timeout?: number): boolean
 
 ตรวจสอบว่ามี element ใดในรายการอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ExistElements(timeout: number, arrSelector: string[]): string
@@ -553,7 +553,7 @@ c.ExistElements(timeout: number, arrSelector: string[]): string
 
 รอจนกว่า element จะหายไป
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.WaitElementHide(selector: string, timeout: number): boolean
@@ -574,7 +574,7 @@ c.WaitElementHide(selector: string, timeout: number): boolean
 
 นับ element ที่ match selector
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.CountElement(selector: string): number
@@ -594,7 +594,7 @@ c.CountElement(selector: string): number
 
 ลบ element ออกจาก DOM
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.RemoveElement(selector: string): boolean
@@ -614,7 +614,7 @@ c.RemoveElement(selector: string): boolean
 
 ตรวจสอบว่า element visible บนหน้าหรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.IsElementVisible(selector: string): boolean
@@ -634,7 +634,7 @@ c.IsElementVisible(selector: string): boolean
 
 ตรวจสอบว่า element อยู่ใน viewport หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.IsElementOnScreen(selector: string, timeout: number): boolean
@@ -655,7 +655,7 @@ c.IsElementOnScreen(selector: string, timeout: number): boolean
 
 ดึงค่า attribute ของ element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetElementAttr(selector: string, attributeName: string): string
@@ -676,7 +676,7 @@ c.GetElementAttr(selector: string, attributeName: string): string
 
 ดึง inner text ของ element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetElementInnerText(selector: string): string
@@ -696,7 +696,7 @@ c.GetElementInnerText(selector: string): string
 
 ตั้ง inner text ของ element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SetElementInnerText(selector: string, value: string): string
@@ -717,7 +717,7 @@ c.SetElementInnerText(selector: string, value: string): string
 
 ดึง innerHTML ของ element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetElementInnerHTML(selector: string): string
@@ -737,7 +737,7 @@ c.GetElementInnerHTML(selector: string): string
 
 ดึง outerHTML ของ element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetElementOuterHTML(selector: string): string
@@ -757,7 +757,7 @@ c.GetElementOuterHTML(selector: string): string
 
 ดึง value ของ element (สำหรับ input)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetElementValue(selector: string): string
@@ -777,7 +777,7 @@ c.GetElementValue(selector: string): string
 
 ตั้ง value ของ element (สำหรับ input)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SetElementValue(selector: string, value: string): boolean
@@ -800,7 +800,7 @@ c.SetElementValue(selector: string, value: string): boolean
 
 คลิก element ตาม CSS selector หรือ XPath
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.Click(selector: string): boolean
@@ -820,7 +820,7 @@ c.Click(selector: string): boolean
 
 คลิก element ด้วย JavaScript (bypass click interception)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ClickJS(selector: string): boolean
@@ -840,7 +840,7 @@ c.ClickJS(selector: string): boolean
 
 Hover เมาส์ไปที่ element (W3C Actions API — pointerMove ไปกึ่งกลาง element) ใช้ duration=100ms เพื่อให้ event mouseover/mouseenter ทำงานครบ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.HoverElement(selector: string, delayMs?: number): boolean
@@ -861,7 +861,7 @@ c.HoverElement(selector: string, delayMs?: number): boolean
 
 เลื่อนเมาส์ไปที่กึ่งกลาง element (ทันที ไม่มี hover delay) ต่างจาก HoverElement ตรง duration=0 — ไม่ trigger mouseover animation
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.MoveElement(selector: string): boolean
@@ -881,7 +881,7 @@ c.MoveElement(selector: string): boolean
 
 Scroll ตามระยะพิกเซล
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ScrollDistance(distance: number): boolean
@@ -901,7 +901,7 @@ c.ScrollDistance(distance: number): boolean
 
 Scroll ไปที่ element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ScrollElement(selector: string): boolean
@@ -921,7 +921,7 @@ c.ScrollElement(selector: string): boolean
 
 Scroll ไปที่ element เฉพาะเมื่อยัง visible ไม่อยู่บนหน้าจอ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ScrollIfNotOnScreen(selector: string): boolean
@@ -941,7 +941,7 @@ c.ScrollIfNotOnScreen(selector: string): boolean
 
 Scroll ไปที่ element แล้วรอ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ScrollAndWait(selector: string, timeWait: number): boolean
@@ -962,7 +962,7 @@ c.ScrollAndWait(selector: string, timeWait: number): boolean
 
 Scroll ไปที่ element แล้วคลิก
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ScrollAndClick(selector: string): boolean
@@ -984,7 +984,7 @@ c.ScrollAndClick(selector: string): boolean
 
 ส่ง keystroke ไปที่ element (ล้างก่อน แล้วพิมพ์ทีละอักษร)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendKeys(selector: string, content: string): boolean
@@ -1005,7 +1005,7 @@ c.SendKeys(selector: string, content: string): boolean
 
 ส่ง keystroke ไปที่ element โดยมีตัวเลือกไม่ล้างก่อน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendKeys2(selector: string, content: string, isDontClearText: boolean): boolean
@@ -1027,7 +1027,7 @@ c.SendKeys2(selector: string, content: string, isDontClearText: boolean): boolea
 
 ส่ง keystroke ด้วย JavaScript setValue + input event
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendKeys3(selector: string, content: string, isDontClearText: boolean): boolean
@@ -1049,7 +1049,7 @@ c.SendKeys3(selector: string, content: string, isDontClearText: boolean): boolea
 
 ส่งไฟล์ไปที่ element file input
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendFile(selector: string, value: string): boolean
@@ -1070,7 +1070,7 @@ c.SendFile(selector: string, value: string): boolean
 
 เลือกข้อความทั้งหมดใน element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SelectText(selector: string): boolean
@@ -1090,7 +1090,7 @@ c.SelectText(selector: string): boolean
 
 ล้างข้อความใน input element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ClearText(selector: string): boolean
@@ -1110,7 +1110,7 @@ c.ClearText(selector: string): boolean
 
 ล้างข้อความผ่าน Ctrl+A + Backspace — fallback สำหรับ input ที่ไม่รองรับ endpoint W3C /clear
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ClearText2(selector: string): boolean
@@ -1130,7 +1130,7 @@ c.ClearText2(selector: string): boolean
 
 คลิก <option> ลูกของ <select> ที่ attribute `value` ตรงกัน Compose `selector + ">[value='X']"` แล้ว delegate ไป Click — trusted W3C click
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SelectOption(selector: string, value: string): boolean
@@ -1151,7 +1151,7 @@ c.SelectOption(selector: string, value: string): boolean
 
 กดปุ่มหรือ combo บน element `key` รับ: ชื่อเดี่ยว (Enter, Tab, Space, Backspace, Delete, Escape, Home, End, PageUp/Down, Arrow*, Shift, Control, Alt, Meta, F1..F12), literal เดี่ยว ("a", "@"...), หรือ combo ("Ctrl+A", "Shift+Tab") NullKey ถูก append หลัง combo เพื่อปล่อย modifier
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.KeyPress(selector: string, key: string): boolean
@@ -1172,7 +1172,7 @@ c.KeyPress(selector: string, key: string): boolean
 
 กด Enter บน element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendEnter(selector: string): boolean
@@ -1192,7 +1192,7 @@ c.SendEnter(selector: string): boolean
 
 กด Backspace บน element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendBackspace(selector: string): boolean
@@ -1212,7 +1212,7 @@ c.SendBackspace(selector: string): boolean
 
 ล้าง field ด้วย Ctrl+A + Delete
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendClear(selector: string): boolean
@@ -1232,7 +1232,7 @@ c.SendClear(selector: string): boolean
 
 กดปุ่มลูกศรลง
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendDownArrow(selector: string): boolean
@@ -1252,7 +1252,7 @@ c.SendDownArrow(selector: string): boolean
 
 กดปุ่มลูกศรขึ้น
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendUpArrow(selector: string): boolean
@@ -1272,7 +1272,7 @@ c.SendUpArrow(selector: string): boolean
 
 กดปุ่ม Home
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendHome(selector: string): boolean
@@ -1292,7 +1292,7 @@ c.SendHome(selector: string): boolean
 
 กดปุ่ม End
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SendEnd(selector: string): boolean
@@ -1314,7 +1314,7 @@ c.SendEnd(selector: string): boolean
 
 รัน JavaScript ใน context ของเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.ExecuteJS(script: string): string
@@ -1334,7 +1334,7 @@ c.ExecuteJS(script: string): string
 
 Log เนื้อหาไปยัง console ของเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.LogJS(content: string): void
@@ -1352,7 +1352,7 @@ c.LogJS(content: string): void
 
 ค้น extension ID ตามชื่อแสดง (นำทางไป chrome://extensions/ แล้ว query shadow DOM) เมื่อเสร็จ นำทางกลับไป URL ก่อนหน้าโดยอัตโนมัติ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetExtensionId(name: string): string
@@ -1372,7 +1372,7 @@ c.GetExtensionId(name: string): string
 
 ดึง cookies ของโดเมน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetCookies(domain: string): string
@@ -1392,7 +1392,7 @@ c.GetCookies(domain: string): string
 
 เพิ่ม cookies หลายตัว (รูปแบบ JSON array)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.AddCookies(cookies: string, domain: string): boolean
@@ -1413,7 +1413,7 @@ c.AddCookies(cookies: string, domain: string): boolean
 
 ลบ cookies ทั้งหมด (alias ของ DeleteAllCookies ระดับ root)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.DeleteCookies(): boolean
@@ -1427,7 +1427,7 @@ c.DeleteCookies(): boolean
 
 ดึง user agent ของเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.GetUseragent(): string
@@ -1441,7 +1441,7 @@ c.GetUseragent(): string
 
 ตั้ง user agent ของเบราว์เซอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.SetUseragent(useragent: string): boolean
@@ -1461,7 +1461,7 @@ c.SetUseragent(useragent: string): boolean
 
 ถ่ายภาพหน้าปัจจุบันและคืนค่าเป็น PNG แบบ base64
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.Screenshot(): string
@@ -1475,7 +1475,7 @@ c.Screenshot(): string
 
 เล่น element วิดีโอ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.PlayVideo(selector: string): boolean
@@ -1497,7 +1497,7 @@ c.PlayVideo(selector: string): boolean
 
 คลิก element เหมือนผู้ใช้จริง: scroll เข้า view, รอ 500-1500ms, ลองสูงสุด 3 ครั้งโดยสุ่มจุดในขอบเขต element (padding 20%), ตรวจสอบ elementFromPoint เพื่อหลีกเลี่ยง overlay บัง, เลื่อนเมาส์ตามเส้นโค้ง Bezier (Fitts's law), pause แล้ว mouse down/up ผ่าน W3C Actions API หลีกเลี่ยงการตรวจจับ "คลิกทันทีโดยไม่มี mousemove" และ "คลิกตรงกลางพอดี"
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.HumanClick(selector: string): boolean
@@ -1517,7 +1517,7 @@ c.HumanClick(selector: string): boolean
 
 พิมพ์ข้อความทีละอักษรพร้อม delay สุ่มต่ออักษร แทรก "thinking pause" 300-700ms ที่ความน่าจะเป็น 50% ทุก ~10 อักษรเพื่อเลียนแบบมนุษย์หยุดคิด คลิก element อัตโนมัติก่อนเพื่อ focus หลีกเลี่ยงการตรวจจับ "100 อักษรวางใน 0ms"
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.HumanSendKeys(selector: string, text: string, minDelay?: number, maxDelay?: number): boolean
@@ -1540,7 +1540,7 @@ c.HumanSendKeys(selector: string, text: string, minDelay?: number, maxDelay?: nu
 
 เลื่อนเคอร์เซอร์ไปยังกึ่งกลาง element ตามเส้นโค้ง Bezier พร้อม jitter ±20% จากกึ่งกลาง หลีกเลี่ยง fingerprinting วิถีตรง
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.HumanMoveElement(selector: string): boolean
@@ -1560,7 +1560,7 @@ c.HumanMoveElement(selector: string): boolean
 
 ลากจาก element ต้นทางไปยัง element ปลายทางด้วยการเคลื่อนไหวช้าและมี pause (1 Actions request atomic) ใช้สำหรับ captcha slider (Cloudflare puzzle), เรียงรายการ, drag-drop UI
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.HumanDrag(srcSelector: string, dstSelector: string): boolean
@@ -1581,7 +1581,7 @@ c.HumanDrag(srcSelector: string, dstSelector: string): boolean
 
 เลียนแบบ user scroll จริงผ่าน W3C Wheel Actions API — ส่ง trusted `wheel` event ก่อน `scroll` event ตามพฤติกรรมเมาส์ wheel จริง ต่างจาก `ScrollDistance` (ใช้ window.scrollBy ส่งแค่ `scroll`): bypass anti-bot ที่ตรวจ "scroll โดยไม่มี wheel" (DataDome, hCaptcha, Cloudflare) แบ่ง `distance` เป็น 3-5 chunk พร้อม jitter ±10% และ delay 80-200ms ระหว่าง chunk
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.HumanScrollDistance(distance: number): boolean
@@ -1603,7 +1603,7 @@ c.HumanScrollDistance(distance: number): boolean
 
 Delay execution.
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.DelayTime(delay: number): void
@@ -1621,7 +1621,7 @@ c.DelayTime(delay: number): void
 
 Delay for a random duration within a range.
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 c.DelayRandom(min: number, max: number): void

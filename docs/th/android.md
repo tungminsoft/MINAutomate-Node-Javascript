@@ -104,7 +104,7 @@
 
 ทำ system action
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.PerformAction(typeAction: number): void
@@ -122,7 +122,7 @@ d.PerformAction(typeAction: number): void
 
 กดปุ่ม Back หลายครั้ง
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.Back(count?: number, delay?: number): void
@@ -141,7 +141,7 @@ d.Back(count?: number, delay?: number): void
 
 Dump XML hierarchy ของหน้าจอ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DumpXml(): string
@@ -155,7 +155,7 @@ d.DumpXml(): string
 
 ตรวจจับหน้าจอปัจจุบัน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DetectScreen(xml?: string): string
@@ -175,7 +175,7 @@ d.DetectScreen(xml?: string): string
 
 ตรวจสอบว่า element มีอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ExistElement(xpath: string, xml?: string, timeout?: number): boolean
@@ -197,7 +197,7 @@ d.ExistElement(xpath: string, xml?: string, timeout?: number): boolean
 
 ตรวจสอบว่ามี element ใดในรายการอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ExistElements(timeout: number, xml: string, lstXpath: string[]): string
@@ -219,7 +219,7 @@ d.ExistElements(timeout: number, xml: string, lstXpath: string[]): string
 
 ตรวจสอบว่า element ทั้งหมดมีอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ExistAllElements(lstXpath: string[], xml?: string): boolean
@@ -240,7 +240,7 @@ d.ExistAllElements(lstXpath: string[], xml?: string): boolean
 
 นับจำนวน element ที่ match xpath
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.CountElement(xpath: string, xml?: string): number
@@ -261,7 +261,7 @@ d.CountElement(xpath: string, xml?: string): number
 
 รอจนกว่า element จะหายไป
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.WaitElementHide(xpath: string, timeout: number): boolean
@@ -282,7 +282,7 @@ d.WaitElementHide(xpath: string, timeout: number): boolean
 
 ดึงค่า attribute ของ element ที่ match xpath
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetElementAttr(xml: string, xpath: string, attribute: string): string[]
@@ -304,7 +304,7 @@ d.GetElementAttr(xml: string, xpath: string, attribute: string): string[]
 
 แตะที่พิกัดที่ระบุ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.TapXY(x: number, y: number): boolean
@@ -325,7 +325,7 @@ d.TapXY(x: number, y: number): boolean
 
 แตะ element ตาม xpath
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.Tap(xpath: string, xml?: string, timeFind?: number): boolean
@@ -347,7 +347,7 @@ d.Tap(xpath: string, xml?: string, timeFind?: number): boolean
 
 แตะตรงกลาง element ตาม xpath
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.TapCenter(xpath: string, xml?: string, timeFind?: number): boolean
@@ -369,7 +369,7 @@ d.TapCenter(xpath: string, xml?: string, timeFind?: number): boolean
 
 แตะสองครั้งที่พิกัดที่ระบุ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DoubleTapXY(x: number, y: number): boolean
@@ -390,7 +390,7 @@ d.DoubleTapXY(x: number, y: number): boolean
 
 แตะค้างที่พิกัดที่ระบุ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.TapLongXY(x: number, y: number, delay?: number): boolean
@@ -412,7 +412,7 @@ d.TapLongXY(x: number, y: number, delay?: number): boolean
 
 แตะค้างที่ element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.TapLong(xpath: string, xml?: string, delay?: number): boolean
@@ -434,7 +434,7 @@ d.TapLong(xpath: string, xml?: string, delay?: number): boolean
 
 แตะค้างที่ตรงกลาง element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.TapLongCenter(xpath: string, xml?: string, delay?: number): boolean
@@ -456,7 +456,7 @@ d.TapLongCenter(xpath: string, xml?: string, delay?: number): boolean
 
 ปัดจากจุดหนึ่งไปอีกจุดหนึ่ง
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.Swipe(x1: number, y1: number, x2: number, y2: number, steps?: number): boolean
@@ -480,7 +480,7 @@ d.Swipe(x1: number, y1: number, x2: number, y2: number, steps?: number): boolean
 
 ปัดขึ้น
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SwipeUp(count?: number, checkScreenChange?: boolean): boolean
@@ -501,7 +501,7 @@ d.SwipeUp(count?: number, checkScreenChange?: boolean): boolean
 
 ปัดลง
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SwipeDown(count?: number, checkScreenChange?: boolean): boolean
@@ -522,7 +522,7 @@ d.SwipeDown(count?: number, checkScreenChange?: boolean): boolean
 
 ปัดซ้าย
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SwipeLeft(count?: number, checkScreenChange?: boolean): boolean
@@ -543,7 +543,7 @@ d.SwipeLeft(count?: number, checkScreenChange?: boolean): boolean
 
 ปัดขวา
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SwipeRight(count?: number, checkScreenChange?: boolean): boolean
@@ -564,7 +564,7 @@ d.SwipeRight(count?: number, checkScreenChange?: boolean): boolean
 
 ปัดจาก element หนึ่งไปอีก element หนึ่ง
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SwipeXpath(xpathFrom: string, xpathTo: string, xml?: string, steps?: number): boolean
@@ -587,7 +587,7 @@ d.SwipeXpath(xpathFrom: string, xpathTo: string, xml?: string, steps?: number): 
 
 ปัดและแตะ element เมื่อพบ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SwipeAndTap(xpath: string, xml?: string, timeout?: number): boolean
@@ -609,7 +609,7 @@ d.SwipeAndTap(xpath: string, xml?: string, timeout?: number): boolean
 
 ป้อนข้อความลง element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.InputText(xpath: string, content: string, xml?: string, isDontClearText?: boolean): boolean
@@ -632,7 +632,7 @@ d.InputText(xpath: string, content: string, xml?: string, isDontClearText?: bool
 
 ป้อนข้อความลง element ทีละอักษร
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.TypeText(xpath: string, content: string, xml?: string, isDontClearText?: boolean): boolean
@@ -655,7 +655,7 @@ d.TypeText(xpath: string, content: string, xml?: string, isDontClearText?: boole
 
 กด key code ที่ระบุ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.InputKeyCode(keyCode: number): boolean
@@ -675,7 +675,7 @@ d.InputKeyCode(keyCode: number): boolean
 
 กดปุ่ม Enter
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.InputEnter(): boolean
@@ -689,7 +689,7 @@ d.InputEnter(): boolean
 
 กดปุ่ม End (เลื่อน cursor ไปท้าย)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.InputEnd(): boolean
@@ -703,7 +703,7 @@ d.InputEnd(): boolean
 
 ล้างข้อความใน element
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ClearText(xpath?: string, xml?: string): boolean
@@ -724,7 +724,7 @@ d.ClearText(xpath?: string, xml?: string): boolean
 
 ตั้ง ADB keyboard เป็น input method หลัก
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SetAdbKeyboard(): boolean
@@ -738,7 +738,7 @@ d.SetAdbKeyboard(): boolean
 
 ซ่อน ADB keyboard
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.HideAdbKeyboard(): void
@@ -750,7 +750,7 @@ d.HideAdbKeyboard(): void
 
 ถ่ายภาพหน้าจอ สามารถ crop ตาม element ได้
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ScreenShot(xpath?: string, xml?: string): string
@@ -773,7 +773,7 @@ d.ScreenShot(xpath?: string, xml?: string): string
 
 รันคำสั่ง shell บนอุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.Shell(command: string): string
@@ -793,7 +793,7 @@ d.Shell(command: string): string
 
 ตรวจสอบว่าโทรศัพท์หลุดการเชื่อมต่อหรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.IsClosed(): boolean
@@ -807,7 +807,7 @@ d.IsClosed(): boolean
 
 ดึงข้อมูลอุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DeviceInfo(): string
@@ -821,7 +821,7 @@ d.DeviceInfo(): string
 
 ดึงขนาดหน้าจออุปกรณ์เป็น string
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DeviceSize(): string
@@ -835,7 +835,7 @@ d.DeviceSize(): string
 
 ดึงความสูงหน้าจออุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DeviceHeight(): number
@@ -849,7 +849,7 @@ d.DeviceHeight(): number
 
 ดึงความกว้างหน้าจออุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DeviceWidth(): number
@@ -863,7 +863,7 @@ d.DeviceWidth(): number
 
 ดึง IP ของอุปกรณ์บนเครือข่ายปัจจุบัน (LAN IP)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetDeviceIP(): string
@@ -877,7 +877,7 @@ d.GetDeviceIP(): string
 
 เปลี่ยนภาษาอุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ChangeLanguage(lang: string): boolean
@@ -897,7 +897,7 @@ d.ChangeLanguage(lang: string): boolean
 
 ตั้งวอลเปเปอร์ของอุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SetWallpaper(imagePath: string, wallpaperType: string): boolean
@@ -918,7 +918,7 @@ d.SetWallpaper(imagePath: string, wallpaperType: string): boolean
 
 ตรวจสอบว่าหน้าจอเปิดอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.IsScreenOn(): boolean
@@ -932,7 +932,7 @@ d.IsScreenOn(): boolean
 
 ปิดหน้าจอ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SleepScreen(): void
@@ -944,7 +944,7 @@ d.SleepScreen(): void
 
 ปลดล็อกหน้าจอด้วยการปัด
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.UnlockScreen(): void
@@ -956,7 +956,7 @@ d.UnlockScreen(): void
 
 เปิด WiFi
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.EnableWifi(): void
@@ -968,7 +968,7 @@ d.EnableWifi(): void
 
 ปิด WiFi
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DisableWifi(): void
@@ -980,7 +980,7 @@ d.DisableWifi(): void
 
 เชื่อมต่อ WiFi
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ConnectWifi(wifiName: string, wifiPass: string): boolean
@@ -1001,7 +1001,7 @@ d.ConnectWifi(wifiName: string, wifiPass: string): boolean
 
 Create folder on device
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.CreateFolder(folderPath: string): void
@@ -1019,7 +1019,7 @@ d.CreateFolder(folderPath: string): void
 
 Delete folder on device
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DeleteFolder(folderPath: string): void
@@ -1037,7 +1037,7 @@ d.DeleteFolder(folderPath: string): void
 
 Delete file on device
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DeleteFile(path: string): void
@@ -1055,7 +1055,7 @@ d.DeleteFile(path: string): void
 
 Pull ไฟล์จากอุปกรณ์ไปยัง PC
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.PullFile(filePath: string, folderPath: string): void
@@ -1074,7 +1074,7 @@ d.PullFile(filePath: string, folderPath: string): void
 
 Push ไฟล์จาก PC ไปยังอุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.PushFile(filePath: string, folderPath: string): void
@@ -1093,7 +1093,7 @@ d.PushFile(filePath: string, folderPath: string): void
 
 Push ภาพไปยัง gallery ของอุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.PushImage(filePath: string): void
@@ -1111,7 +1111,7 @@ d.PushImage(filePath: string): void
 
 Push ไฟล์ media ไปยัง gallery (รองรับภาพและวิดีโอ)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.PushMedia(filePaths: string[]): void
@@ -1129,7 +1129,7 @@ d.PushMedia(filePaths: string[]): void
 
 Get current IP address of proxy
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.CheckProxy(proxy?: string, web?: string): string
@@ -1150,7 +1150,7 @@ d.CheckProxy(proxy?: string, web?: string): string
 
 เชื่อมต่อ proxy
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ConnectProxy(proxy: string): void
@@ -1168,7 +1168,7 @@ d.ConnectProxy(proxy: string): void
 
 ตัดการเชื่อมต่อ proxy
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DisconnectProxy(): void
@@ -1180,7 +1180,7 @@ d.DisconnectProxy(): void
 
 ดึงข้อมูล clipboard
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetClipboard(): string
@@ -1194,7 +1194,7 @@ d.GetClipboard(): string
 
 ตั้งข้อมูล clipboard
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.SetClipboard(content: string): void
@@ -1214,7 +1214,7 @@ d.SetClipboard(content: string): void
 
 เปิดแอปตาม package name
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.OpenApp(package: string, isKill?: boolean, timeout?: number): boolean
@@ -1236,7 +1236,7 @@ d.OpenApp(package: string, isKill?: boolean, timeout?: number): boolean
 
 ปิดแอปตาม package
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.CloseApp(package: string): void
@@ -1254,7 +1254,7 @@ d.CloseApp(package: string): void
 
 ตรวจสอบว่าแอปอยู่ใน foreground หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.IsAppOpened(package: string): boolean
@@ -1274,7 +1274,7 @@ d.IsAppOpened(package: string): boolean
 
 ดึงแอปที่อยู่ใน foreground
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetCurrentApp(): string
@@ -1288,7 +1288,7 @@ d.GetCurrentApp(): string
 
 ตรวจสอบว่าแอปติดตั้งแล้วหรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.IsAppInstalled(package: string): boolean
@@ -1308,7 +1308,7 @@ d.IsAppInstalled(package: string): boolean
 
 ล้างข้อมูลแอป
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.ClearDataApp(package: string): void
@@ -1326,7 +1326,7 @@ d.ClearDataApp(package: string): void
 
 ดึงเวอร์ชันของแอป
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetAppVersion(package: string): string
@@ -1346,7 +1346,7 @@ d.GetAppVersion(package: string): string
 
 ติดตั้งแอปจากไฟล์ APK
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.InstallApp(apkPath: string): void
@@ -1364,7 +1364,7 @@ d.InstallApp(apkPath: string): void
 
 ถอนการติดตั้งแอป
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.UninstallApp(package: string): void
@@ -1382,7 +1382,7 @@ d.UninstallApp(package: string): void
 
 ดึงข้อมูลแอป
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetInfoApp(package: string): string
@@ -1402,7 +1402,7 @@ d.GetInfoApp(package: string): string
 
 ดึงรายการ package ทั้งหมดบนอุปกรณ์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetListApps(): string[]
@@ -1416,7 +1416,7 @@ d.GetListApps(): string[]
 
 ดึงรายการ package ที่ติดตั้ง (ไม่รวม system app)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetListAppsInstalled(): string[]
@@ -1430,7 +1430,7 @@ d.GetListAppsInstalled(): string[]
 
 ดึง activity ที่อยู่ใน foreground
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.GetCurrentActivity(): string
@@ -1444,7 +1444,7 @@ d.GetCurrentActivity(): string
 
 เริ่ม Android activity
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.StartActivity(activity: string): void
@@ -1464,7 +1464,7 @@ d.StartActivity(activity: string): void
 
 เปิดแอป Facebook ด้วย LoginActivity
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.OpenAppFB(package: string, isKill?: boolean, timeout?: number): boolean
@@ -1486,7 +1486,7 @@ d.OpenAppFB(package: string, isKill?: boolean, timeout?: number): boolean
 
 เปิด URL scheme ในแอป Facebook (เช่น "fb://profile/123")
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.OpenUrlSchemeFB(link: string): void
@@ -1504,7 +1504,7 @@ d.OpenUrlSchemeFB(link: string): void
 
 Backup ข้อมูลแอป (ต้องการ root)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.BackupAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
@@ -1525,7 +1525,7 @@ d.BackupAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
 
 Restore ข้อมูลแอปจาก backup (ต้องการ root)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.RestoreAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
@@ -1548,7 +1548,7 @@ d.RestoreAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
 
 เปิด URL scheme ในแอป Instagram (เช่น "instagram://user?username=xxx")
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.OpenUrlSchemeIG(link: string): void
@@ -1568,7 +1568,7 @@ d.OpenUrlSchemeIG(link: string): void
 
 เปิด URL scheme ในแอป Facebook Lite
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.OpenUrlSchemeFBLite(link: string): void
@@ -1588,7 +1588,7 @@ d.OpenUrlSchemeFBLite(link: string): void
 
 Delay execution
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.Delay(delay: number): void
@@ -1606,7 +1606,7 @@ d.Delay(delay: number): void
 
 Delay random time
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 d.DelayRandom(min: number, max: number): void

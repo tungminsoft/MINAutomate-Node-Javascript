@@ -68,7 +68,7 @@
 
 Ghi message vào log thực thi (real-time).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 Log(msg: any): void
@@ -86,7 +86,7 @@ Log(msg: any): void
 
 Đặt message tiến độ real-time cho workflow hiện tại (ví dụ: hiển thị trên status bar của host UI). Đi qua hook MessageCallback cấu hình bên Go.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 SetMessage(msg: any): void
@@ -104,7 +104,7 @@ SetMessage(msg: any): void
 
 Hoãn thực thi.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 Delay(delay: number): void
@@ -122,7 +122,7 @@ Delay(delay: number): void
 
 Alias của Delay.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 DelayTime(delay: number): void
@@ -140,7 +140,7 @@ DelayTime(delay: number): void
 
 Delay một khoảng thời gian ngẫu nhiên.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 DelayRandom(min: number, max: number): void
@@ -159,7 +159,7 @@ DelayRandom(min: number, max: number): void
 
 Gửi một HTTP request.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 HttpRequest(method: string, url: string, contentType: string, headers: string, body: string, timeout: number): string
@@ -184,7 +184,7 @@ HttpRequest(method: string, url: string, contentType: string, headers: string, b
 
 Sinh mã TOTP từ secret key (2FA).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 GetOtp2FA(secret: string): string
@@ -204,7 +204,7 @@ GetOtp2FA(secret: string): string
 
 Alias của GetOtp2FA.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 GetTotp(secret: string): string
@@ -226,7 +226,7 @@ GetTotp(secret: string): string
 
 Sinh số nguyên ngẫu nhiên giữa min và max.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RandomNumber(min: number, max: number): number
@@ -247,7 +247,7 @@ RandomNumber(min: number, max: number): number
 
 Alias của RandomNumber.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RandomInt(min: number, max: number): number
@@ -268,7 +268,7 @@ RandomInt(min: number, max: number): number
 
 Sinh số nguyên ngẫu nhiên có N chữ số (vd length=4 → 1000-9999).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 Random(length: number): number
@@ -288,7 +288,7 @@ Random(length: number): number
 
 Sinh chuỗi ngẫu nhiên.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RandomString(length: number, typeRandom?: string): string
@@ -309,7 +309,7 @@ RandomString(length: number, typeRandom?: string): string
 
 Sinh boolean ngẫu nhiên với tỷ lệ true cho trước.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RandomBool(percent: number): boolean
@@ -329,7 +329,7 @@ RandomBool(percent: number): boolean
 
 Lấy ngẫu nhiên một phần tử trong mảng.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RandomItem(arr: string[]): string
@@ -351,7 +351,7 @@ RandomItem(arr: string[]): string
 
 Spin text — chọn ngẫu nhiên một biến thể trong cú pháp spin.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 SpinText(text: string): string
@@ -371,7 +371,7 @@ SpinText(text: string): string
 
 Thay thế tất cả các lần xuất hiện của một chuỗi.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 Replace(s: string, old: string, newStr: string): string
@@ -393,7 +393,7 @@ Replace(s: string, old: string, newStr: string): string
 
 Loại bỏ ký tự emoji / icon khỏi chuỗi.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RemoveIcon(text: string): string
@@ -413,7 +413,7 @@ RemoveIcon(text: string): string
 
 Chuyển tiếng Việt có dấu thành không dấu.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 ConvertToUnSign(text: string): string
@@ -433,7 +433,7 @@ ConvertToUnSign(text: string): string
 
 Kiểm tra chuỗi có phải tên tiếng Việt hợp lệ (đúng pattern + dấu).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 IsVNName(text: string): boolean
@@ -455,7 +455,7 @@ IsVNName(text: string): boolean
 
 Giải mã chuỗi base64.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 DecodeBase64(encoded: string): string
@@ -475,7 +475,7 @@ DecodeBase64(encoded: string): string
 
 Mã hóa chuỗi sang base64.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 EncodeBase64(text: string): string
@@ -497,7 +497,7 @@ EncodeBase64(text: string): string
 
 Match regex và lấy một group cụ thể.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RegexGroups1(input: string, pattern: string, index: number): string
@@ -519,7 +519,7 @@ RegexGroups1(input: string, pattern: string, index: number): string
 
 Match regex và trả về tất cả các group đã capture.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RegexGroups(input: string, pattern: string): string[]
@@ -542,7 +542,7 @@ RegexGroups(input: string, pattern: string): string[]
 
 Kiểm tra file hoặc thư mục có tồn tại không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 ExistsPath(path: string): boolean
@@ -562,7 +562,7 @@ ExistsPath(path: string): boolean
 
 Tạo thư mục.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 CreateFolder(folderPath: string): boolean
@@ -582,7 +582,7 @@ CreateFolder(folderPath: string): boolean
 
 Xóa thư mục và toàn bộ nội dung bên trong.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 DeleteFolder(folderPath: string): boolean
@@ -602,7 +602,7 @@ DeleteFolder(folderPath: string): boolean
 
 Liệt kê các thư mục con bên trong thư mục.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 ListFolders(folderPath: string, folderPrefix?: string): string[]
@@ -623,7 +623,7 @@ ListFolders(folderPath: string, folderPrefix?: string): string[]
 
 Đọc nội dung file.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 ReadFile(filePath: string): string
@@ -643,7 +643,7 @@ ReadFile(filePath: string): string
 
 Ghi thêm (append) nội dung vào file.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 AppendFile(filePath: string, content: string): boolean
@@ -664,7 +664,7 @@ AppendFile(filePath: string, content: string): boolean
 
 Ghi nội dung vào file (ghi đè).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 WriteFile(filePath: string, content: string): boolean
@@ -685,7 +685,7 @@ WriteFile(filePath: string, content: string): boolean
 
 Xóa file.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 DeleteFile(filePath: string): boolean
@@ -705,7 +705,7 @@ DeleteFile(filePath: string): boolean
 
 Liệt kê file trong thư mục.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 ListFiles(folderPath: string, extensions?: string): string[]
@@ -726,7 +726,7 @@ ListFiles(folderPath: string, extensions?: string): string[]
 
 Lưu dữ liệu (URL hoặc base64) ra file.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 SaveAssets(data: string, filePath: string): boolean
@@ -749,7 +749,7 @@ SaveAssets(data: string, filePath: string): boolean
 
 Kiểm tra proxy và lấy IP hiện tại.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 CheckProxy(proxy: string, typeProxy: number, timeout: number): string
@@ -773,7 +773,7 @@ CheckProxy(proxy: string, typeProxy: number, timeout: number): string
 
 Lấy giá trị string trong JSON theo path.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 JsonGetString(json: string, path: string): string
@@ -794,7 +794,7 @@ JsonGetString(json: string, path: string): string
 
 Lấy giá trị integer trong JSON theo path.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 JsonGetInt(json: string, path: string): number
@@ -815,7 +815,7 @@ JsonGetInt(json: string, path: string): number
 
 Lấy giá trị boolean trong JSON theo path.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 JsonGetBool(json: string, path: string): boolean
@@ -838,7 +838,7 @@ JsonGetBool(json: string, path: string): boolean
 
 Kiểm tra chuỗi có phải Facebook UID hợp lệ không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 IsUidFB(input: string): boolean
@@ -858,7 +858,7 @@ IsUidFB(input: string): boolean
 
 Alias của IsUidFB.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 IsUid(input: string): boolean
@@ -878,7 +878,7 @@ IsUid(input: string): boolean
 
 Kiểm tra trạng thái sống của Facebook UID qua request wall.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 CheckLiveUidFB(uid: string, proxy: string): number
@@ -901,7 +901,7 @@ CheckLiveUidFB(uid: string, proxy: string): number
 
 Giải captcha dạng ảnh sang text qua OmoCaptcha.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 OmoCaptcha_ImageToText(apiKey: string, base64Image: string): string
@@ -924,7 +924,7 @@ OmoCaptcha_ImageToText(apiKey: string, base64Image: string): string
 
 Giành lock theo tên (block đến khi giành được), chạy callback, tự động release. Dùng để bảo vệ critical section khi nhiều script chạy song song và động đến cùng tài nguyên (file, thiết bị...). CẢNH BÁO: KHÔNG REENTRANT — gọi lồng cùng tên gây deadlock vĩnh viễn.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 RunWithLock(name: string, fn: () => void): void

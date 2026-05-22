@@ -104,7 +104,7 @@
 
 Mở trình duyệt với profile đã cấu hình.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.Open(): boolean
@@ -118,7 +118,7 @@ c.Open(): boolean
 
 Đóng trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.Close(): boolean
@@ -132,7 +132,7 @@ c.Close(): boolean
 
 Kiểm tra trình duyệt đã đóng chưa.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.IsClosed(): boolean
@@ -146,7 +146,7 @@ c.IsClosed(): boolean
 
 Lấy kích thước cửa sổ trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetSize(): string
@@ -160,7 +160,7 @@ c.GetSize(): string
 
 Đặt kích thước cửa sổ trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SetSize(width: number, height: number): boolean
@@ -181,7 +181,7 @@ c.SetSize(width: number, height: number): boolean
 
 Khôi phục kích thước gốc của cửa sổ trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.RestoreSize(): boolean
@@ -195,7 +195,7 @@ c.RestoreSize(): boolean
 
 Lấy vị trí cửa sổ trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetPosition(): string
@@ -209,7 +209,7 @@ c.GetPosition(): string
 
 Đặt vị trí cửa sổ trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SetPosition(x: number, y: number): boolean
@@ -230,7 +230,7 @@ c.SetPosition(x: number, y: number): boolean
 
 Khôi phục vị trí gốc của cửa sổ trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.RestorePosition(): boolean
@@ -246,7 +246,7 @@ c.RestorePosition(): boolean
 
 Điều hướng tới URL.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GotoUrl(url: string): boolean
@@ -266,7 +266,7 @@ c.GotoUrl(url: string): boolean
 
 Lấy URL trang hiện tại.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetUrl(): string
@@ -280,7 +280,7 @@ c.GetUrl(): string
 
 Chờ tới khi URL khác `currentUrl`, hoặc timeout.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.WaitUrlChanged(currentUrl: string, timeout: number): boolean
@@ -299,9 +299,9 @@ c.WaitUrlChanged(currentUrl: string, timeout: number): boolean
 
 ### c.Back
 
-Back trong history trình duyệt.
+Quay lại trong history trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.Back(count: number): void
@@ -311,7 +311,7 @@ c.Back(count: number): void
 
 | Tên | Kiểu | Mô tả |
 |------|------|-------------|
-| `count` | `number` | Số lần back |
+| `count` | `number` | Số lần quay lại |
 
 ---
 
@@ -319,7 +319,7 @@ c.Back(count: number): void
 
 Refresh trang hiện tại.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.Refresh(): void
@@ -331,7 +331,7 @@ c.Refresh(): void
 
 Mở tab mới, chuyển focus sang tab đó và tùy chọn điều hướng tới `url`. (W3C /window/new không tự switch — implementation tự parse handle mới và switch thủ công.)
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.NewTab(url?: string): boolean
@@ -351,7 +351,7 @@ c.NewTab(url?: string): boolean
 
 Chuyển focus sang tab theo index (0-based) trong danh sách window handle hiện tại.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ActiveTab(index: number): boolean
@@ -371,7 +371,7 @@ c.ActiveTab(index: number): boolean
 
 Đóng tab đang focus. Sau khi đóng, switch về tab[0] nếu còn.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.CloseTab(): boolean
@@ -385,7 +385,7 @@ c.CloseTab(): boolean
 
 Đóng tất cả tab khác, giữ tab đang focus.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.CloseOtherTabs(): boolean
@@ -399,7 +399,7 @@ c.CloseOtherTabs(): boolean
 
 Switch vào iframe theo index (chuỗi số) HOẶC selector (xpath/css).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SwitchFrame(selector: string): boolean
@@ -419,7 +419,7 @@ c.SwitchFrame(selector: string): boolean
 
 Tìm cửa sổ popup theo title và switch focus sang đó. Duyệt qua tất cả window handle, switch rồi so sánh title === input.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SwitchPopup(title: string): boolean
@@ -439,7 +439,7 @@ c.SwitchPopup(title: string): boolean
 
 Thoát toàn bộ nested frame về document top-level.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SwitchDefaultFrame(): boolean
@@ -453,7 +453,7 @@ c.SwitchDefaultFrame(): boolean
 
 Switch về frame cha.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SwitchParentFrame(): boolean
@@ -467,7 +467,7 @@ c.SwitchParentFrame(): boolean
 
 Accept alert (bấm OK).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.AcceptAlert(): boolean
@@ -481,7 +481,7 @@ c.AcceptAlert(): boolean
 
 Dismiss alert (bấm Cancel).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.CancelAlert(): boolean
@@ -495,7 +495,7 @@ c.CancelAlert(): boolean
 
 Lấy source HTML của trang.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetPageSource(): string
@@ -511,7 +511,7 @@ c.GetPageSource(): string
 
 Kiểm tra element có tồn tại không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ExistElement(selector: string, timeout?: number): boolean
@@ -532,7 +532,7 @@ c.ExistElement(selector: string, timeout?: number): boolean
 
 Kiểm tra có element nào trong danh sách tồn tại không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ExistElements(timeout: number, arrSelector: string[]): string
@@ -553,7 +553,7 @@ c.ExistElements(timeout: number, arrSelector: string[]): string
 
 Chờ element biến mất.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.WaitElementHide(selector: string, timeout: number): boolean
@@ -574,7 +574,7 @@ c.WaitElementHide(selector: string, timeout: number): boolean
 
 Đếm số element match selector.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.CountElement(selector: string): number
@@ -594,7 +594,7 @@ c.CountElement(selector: string): number
 
 Xóa element khỏi DOM.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.RemoveElement(selector: string): boolean
@@ -614,7 +614,7 @@ c.RemoveElement(selector: string): boolean
 
 Kiểm tra element có visible trên trang không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.IsElementVisible(selector: string): boolean
@@ -634,7 +634,7 @@ c.IsElementVisible(selector: string): boolean
 
 Kiểm tra element có ở trong viewport không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.IsElementOnScreen(selector: string, timeout: number): boolean
@@ -655,7 +655,7 @@ c.IsElementOnScreen(selector: string, timeout: number): boolean
 
 Lấy giá trị attribute của element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetElementAttr(selector: string, attributeName: string): string
@@ -676,7 +676,7 @@ c.GetElementAttr(selector: string, attributeName: string): string
 
 Lấy inner text của element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetElementInnerText(selector: string): string
@@ -696,7 +696,7 @@ c.GetElementInnerText(selector: string): string
 
 Đặt inner text cho element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SetElementInnerText(selector: string, value: string): string
@@ -717,7 +717,7 @@ c.SetElementInnerText(selector: string, value: string): string
 
 Lấy innerHTML của element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetElementInnerHTML(selector: string): string
@@ -737,7 +737,7 @@ c.GetElementInnerHTML(selector: string): string
 
 Lấy outerHTML của element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetElementOuterHTML(selector: string): string
@@ -757,7 +757,7 @@ c.GetElementOuterHTML(selector: string): string
 
 Lấy value của element (cho input).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetElementValue(selector: string): string
@@ -777,7 +777,7 @@ c.GetElementValue(selector: string): string
 
 Đặt value cho element (cho input).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SetElementValue(selector: string, value: string): boolean
@@ -800,7 +800,7 @@ c.SetElementValue(selector: string, value: string): boolean
 
 Click element theo CSS selector hoặc XPath.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.Click(selector: string): boolean
@@ -820,7 +820,7 @@ c.Click(selector: string): boolean
 
 Click element bằng JavaScript (bypass click interception).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ClickJS(selector: string): boolean
@@ -840,7 +840,7 @@ c.ClickJS(selector: string): boolean
 
 Hover chuột lên element (W3C Actions API — pointerMove tới tâm element). Dùng duration=100ms để event mouseover/mouseenter fire đầy đủ.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.HoverElement(selector: string, delayMs?: number): boolean
@@ -859,9 +859,9 @@ c.HoverElement(selector: string, delayMs?: number): boolean
 
 ### c.MoveElement
 
-Di chuyển chuột tới tâm element (instant, không hover delay). Khác HoverElement vì duration=0 — không trigger mouseover animation.
+Di chuyển chuột tới tâm element (instant, không hover delay). Khác với HoverElement vì duration=0 — không trigger mouseover animation.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.MoveElement(selector: string): boolean
@@ -881,7 +881,7 @@ c.MoveElement(selector: string): boolean
 
 Scroll một quãng pixel.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ScrollDistance(distance: number): boolean
@@ -901,7 +901,7 @@ c.ScrollDistance(distance: number): boolean
 
 Scroll tới element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ScrollElement(selector: string): boolean
@@ -921,7 +921,7 @@ c.ScrollElement(selector: string): boolean
 
 Chỉ scroll tới element nếu nó chưa visible trên màn hình.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ScrollIfNotOnScreen(selector: string): boolean
@@ -941,7 +941,7 @@ c.ScrollIfNotOnScreen(selector: string): boolean
 
 Scroll tới element rồi chờ.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ScrollAndWait(selector: string, timeWait: number): boolean
@@ -962,7 +962,7 @@ c.ScrollAndWait(selector: string, timeWait: number): boolean
 
 Scroll tới element rồi click.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ScrollAndClick(selector: string): boolean
@@ -984,7 +984,7 @@ c.ScrollAndClick(selector: string): boolean
 
 Gõ phím vào element (xóa trước rồi gõ từng ký tự).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendKeys(selector: string, content: string): boolean
@@ -1005,7 +1005,7 @@ c.SendKeys(selector: string, content: string): boolean
 
 Gõ phím vào element với option không xóa trước.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendKeys2(selector: string, content: string, isDontClearText: boolean): boolean
@@ -1027,7 +1027,7 @@ c.SendKeys2(selector: string, content: string, isDontClearText: boolean): boolea
 
 Gõ phím dùng JavaScript setValue + input event.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendKeys3(selector: string, content: string, isDontClearText: boolean): boolean
@@ -1049,7 +1049,7 @@ c.SendKeys3(selector: string, content: string, isDontClearText: boolean): boolea
 
 Gửi file vào element file input.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendFile(selector: string, value: string): boolean
@@ -1070,7 +1070,7 @@ c.SendFile(selector: string, value: string): boolean
 
 Select toàn bộ text trong element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SelectText(selector: string): boolean
@@ -1090,7 +1090,7 @@ c.SelectText(selector: string): boolean
 
 Xóa text trong input element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ClearText(selector: string): boolean
@@ -1110,7 +1110,7 @@ c.ClearText(selector: string): boolean
 
 Xóa text qua Ctrl+A + Backspace — fallback cho input không hỗ trợ endpoint W3C /clear.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ClearText2(selector: string): boolean
@@ -1130,7 +1130,7 @@ c.ClearText2(selector: string): boolean
 
 Click <option> con của <select> mà thuộc tính `value` khớp. Compose `selector + ">[value='X']"` rồi delegate sang Click — trusted W3C click.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SelectOption(selector: string, value: string): boolean
@@ -1151,7 +1151,7 @@ c.SelectOption(selector: string, value: string): boolean
 
 Bấm phím hoặc combo trên element. `key` chấp nhận: tên đơn (Enter, Tab, Space, Backspace, Delete, Escape, Home, End, PageUp/Down, Arrow*, Shift, Control, Alt, Meta, F1..F12), literal đơn ("a", "@"...), hoặc combo ("Ctrl+A", "Shift+Tab"). NullKey được append sau combo để release modifier.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.KeyPress(selector: string, key: string): boolean
@@ -1172,7 +1172,7 @@ c.KeyPress(selector: string, key: string): boolean
 
 Bấm Enter trên element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendEnter(selector: string): boolean
@@ -1192,7 +1192,7 @@ c.SendEnter(selector: string): boolean
 
 Bấm Backspace trên element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendBackspace(selector: string): boolean
@@ -1212,7 +1212,7 @@ c.SendBackspace(selector: string): boolean
 
 Xóa field bằng Ctrl+A + Delete.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendClear(selector: string): boolean
@@ -1232,7 +1232,7 @@ c.SendClear(selector: string): boolean
 
 Bấm phím mũi tên xuống.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendDownArrow(selector: string): boolean
@@ -1252,7 +1252,7 @@ c.SendDownArrow(selector: string): boolean
 
 Bấm phím mũi tên lên.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendUpArrow(selector: string): boolean
@@ -1272,7 +1272,7 @@ c.SendUpArrow(selector: string): boolean
 
 Bấm phím Home.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendHome(selector: string): boolean
@@ -1292,7 +1292,7 @@ c.SendHome(selector: string): boolean
 
 Bấm phím End.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SendEnd(selector: string): boolean
@@ -1314,7 +1314,7 @@ c.SendEnd(selector: string): boolean
 
 Thực thi JavaScript trong context trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.ExecuteJS(script: string): string
@@ -1334,7 +1334,7 @@ c.ExecuteJS(script: string): string
 
 Log nội dung ra console của trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.LogJS(content: string): void
@@ -1352,7 +1352,7 @@ c.LogJS(content: string): void
 
 Tra extension ID theo tên hiển thị (vào chrome://extensions/ rồi query shadow DOM). Sau khi xong, tự navigate về URL trước.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetExtensionId(name: string): string
@@ -1372,7 +1372,7 @@ c.GetExtensionId(name: string): string
 
 Lấy cookies cho domain.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetCookies(domain: string): string
@@ -1392,7 +1392,7 @@ c.GetCookies(domain: string): string
 
 Thêm nhiều cookies (định dạng mảng JSON).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.AddCookies(cookies: string, domain: string): boolean
@@ -1413,7 +1413,7 @@ c.AddCookies(cookies: string, domain: string): boolean
 
 Xóa toàn bộ cookies (alias của DeleteAllCookies ở root).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.DeleteCookies(): boolean
@@ -1427,7 +1427,7 @@ c.DeleteCookies(): boolean
 
 Lấy user agent của trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.GetUseragent(): string
@@ -1441,7 +1441,7 @@ c.GetUseragent(): string
 
 Đặt user agent cho trình duyệt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.SetUseragent(useragent: string): boolean
@@ -1461,7 +1461,7 @@ c.SetUseragent(useragent: string): boolean
 
 Chụp ảnh trang hiện tại và trả về PNG dạng base64.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.Screenshot(): string
@@ -1475,7 +1475,7 @@ c.Screenshot(): string
 
 Play element video.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.PlayVideo(selector: string): boolean
@@ -1497,7 +1497,7 @@ c.PlayVideo(selector: string): boolean
 
 Click element như user thật: scroll vào view, chờ 500-1500ms, thử tối đa 3 lần với điểm random trong bounds (padding 20%), kiểm tra elementFromPoint để tránh bị overlay che, di chuột theo đường cong Bezier (Fitts's law), pause rồi mouse down/up qua W3C Actions API. Tránh detect "instant click không có mousemove" và "click chính giữa".
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.HumanClick(selector: string): boolean
@@ -1517,7 +1517,7 @@ c.HumanClick(selector: string): boolean
 
 Gõ text từng ký tự với delay ngẫu nhiên giữa các ký tự. Chèn "pause suy nghĩ" 300-700ms với xác suất 50% mỗi ~10 ký tự để giả lập người. Auto click element trước để focus. Tránh detect "100 ký tự paste trong 0ms".
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.HumanSendKeys(selector: string, text: string, minDelay?: number, maxDelay?: number): boolean
@@ -1540,7 +1540,7 @@ c.HumanSendKeys(selector: string, text: string, minDelay?: number, maxDelay?: nu
 
 Di chuột tới tâm element theo đường cong Bezier, có jitter ±20% so với tâm chính xác. Tránh fingerprint quỹ đạo tuyến tính.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.HumanMoveElement(selector: string): boolean
@@ -1560,7 +1560,7 @@ c.HumanMoveElement(selector: string): boolean
 
 Drag từ element nguồn sang element đích với chuyển động chậm có pause (1 Actions request atomic). Pattern: move src (200-400ms) → pause 100-250ms → down → pause 50ms → slow move dst (500-1000ms) → pause 100-250ms → up. Dùng cho captcha slider (Cloudflare), reorder list, drag-drop UI.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.HumanDrag(srcSelector: string, dstSelector: string): boolean
@@ -1581,7 +1581,7 @@ c.HumanDrag(srcSelector: string, dstSelector: string): boolean
 
 Mô phỏng scroll thật qua W3C Wheel Actions API — fire `wheel` event trusted với `distance` TRƯỚC khi `scroll` event xảy ra, giống hành vi chuột lăn thật. Khác `ScrollDistance` (dùng window.scrollBy chỉ fire `scroll`): bypass anti-bot kiểm tra "scroll không có wheel" (DataDome, hCaptcha, Cloudflare). Split `distance` thành 3-5 chunk với jitter ±10% và delay 80-200ms giữa các chunk để giả lập scroll từng nấc.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.HumanScrollDistance(distance: number): boolean
@@ -1603,7 +1603,7 @@ c.HumanScrollDistance(distance: number): boolean
 
 Delay execution.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.DelayTime(delay: number): void
@@ -1621,7 +1621,7 @@ c.DelayTime(delay: number): void
 
 Delay for a random duration within a range.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 c.DelayRandom(min: number, max: number): void

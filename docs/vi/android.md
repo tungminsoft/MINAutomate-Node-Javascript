@@ -104,7 +104,7 @@
 
 Thực thi hành động hệ thống.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.PerformAction(typeAction: number): void
@@ -122,7 +122,7 @@ d.PerformAction(typeAction: number): void
 
 Bấm nút Back nhiều lần.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.Back(count?: number, delay?: number): void
@@ -141,7 +141,7 @@ d.Back(count?: number, delay?: number): void
 
 Dump cây XML hierarchy của màn hình.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DumpXml(): string
@@ -155,7 +155,7 @@ d.DumpXml(): string
 
 Nhận diện màn hình hiện tại.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DetectScreen(xml?: string): string
@@ -175,7 +175,7 @@ d.DetectScreen(xml?: string): string
 
 Kiểm tra element có tồn tại không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ExistElement(xpath: string, xml?: string, timeout?: number): boolean
@@ -197,7 +197,7 @@ d.ExistElement(xpath: string, xml?: string, timeout?: number): boolean
 
 Kiểm tra có element nào trong danh sách tồn tại không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ExistElements(timeout: number, xml: string, lstXpath: string[]): string
@@ -219,7 +219,7 @@ d.ExistElements(timeout: number, xml: string, lstXpath: string[]): string
 
 Kiểm tra tất cả element có tồn tại không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ExistAllElements(lstXpath: string[], xml?: string): boolean
@@ -240,7 +240,7 @@ d.ExistAllElements(lstXpath: string[], xml?: string): boolean
 
 Đếm số element match xpath.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.CountElement(xpath: string, xml?: string): number
@@ -261,7 +261,7 @@ d.CountElement(xpath: string, xml?: string): number
 
 Chờ element biến mất.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.WaitElementHide(xpath: string, timeout: number): boolean
@@ -282,7 +282,7 @@ d.WaitElementHide(xpath: string, timeout: number): boolean
 
 Lấy giá trị attribute của các element match xpath.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetElementAttr(xml: string, xpath: string, attribute: string): string[]
@@ -304,7 +304,7 @@ d.GetElementAttr(xml: string, xpath: string, attribute: string): string[]
 
 Tap vào tọa độ cụ thể.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.TapXY(x: number, y: number): boolean
@@ -325,7 +325,7 @@ d.TapXY(x: number, y: number): boolean
 
 Tap vào element theo xpath.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.Tap(xpath: string, xml?: string, timeFind?: number): boolean
@@ -347,7 +347,7 @@ d.Tap(xpath: string, xml?: string, timeFind?: number): boolean
 
 Tap vào tâm element theo xpath.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.TapCenter(xpath: string, xml?: string, timeFind?: number): boolean
@@ -369,7 +369,7 @@ d.TapCenter(xpath: string, xml?: string, timeFind?: number): boolean
 
 Tap đúp vào tọa độ cụ thể.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DoubleTapXY(x: number, y: number): boolean
@@ -390,7 +390,7 @@ d.DoubleTapXY(x: number, y: number): boolean
 
 Giữ (long tap) tại tọa độ cụ thể.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.TapLongXY(x: number, y: number, delay?: number): boolean
@@ -412,7 +412,7 @@ d.TapLongXY(x: number, y: number, delay?: number): boolean
 
 Giữ (long tap) trên element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.TapLong(xpath: string, xml?: string, delay?: number): boolean
@@ -434,7 +434,7 @@ d.TapLong(xpath: string, xml?: string, delay?: number): boolean
 
 Giữ (long tap) tại tâm element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.TapLongCenter(xpath: string, xml?: string, delay?: number): boolean
@@ -456,7 +456,7 @@ d.TapLongCenter(xpath: string, xml?: string, delay?: number): boolean
 
 Vuốt từ điểm tới điểm.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.Swipe(x1: number, y1: number, x2: number, y2: number, steps?: number): boolean
@@ -480,7 +480,7 @@ d.Swipe(x1: number, y1: number, x2: number, y2: number, steps?: number): boolean
 
 Vuốt lên.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SwipeUp(count?: number, checkScreenChange?: boolean): boolean
@@ -501,7 +501,7 @@ d.SwipeUp(count?: number, checkScreenChange?: boolean): boolean
 
 Vuốt xuống.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SwipeDown(count?: number, checkScreenChange?: boolean): boolean
@@ -522,7 +522,7 @@ d.SwipeDown(count?: number, checkScreenChange?: boolean): boolean
 
 Vuốt sang trái.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SwipeLeft(count?: number, checkScreenChange?: boolean): boolean
@@ -543,7 +543,7 @@ d.SwipeLeft(count?: number, checkScreenChange?: boolean): boolean
 
 Vuốt sang phải.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SwipeRight(count?: number, checkScreenChange?: boolean): boolean
@@ -564,7 +564,7 @@ d.SwipeRight(count?: number, checkScreenChange?: boolean): boolean
 
 Vuốt từ element này tới element khác.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SwipeXpath(xpathFrom: string, xpathTo: string, xml?: string, steps?: number): boolean
@@ -587,7 +587,7 @@ d.SwipeXpath(xpathFrom: string, xpathTo: string, xml?: string, steps?: number): 
 
 Vuốt liên tục cho đến khi tìm thấy element rồi tap.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SwipeAndTap(xpath: string, xml?: string, timeout?: number): boolean
@@ -609,7 +609,7 @@ d.SwipeAndTap(xpath: string, xml?: string, timeout?: number): boolean
 
 Nhập text vào element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.InputText(xpath: string, content: string, xml?: string, isDontClearText?: boolean): boolean
@@ -632,7 +632,7 @@ d.InputText(xpath: string, content: string, xml?: string, isDontClearText?: bool
 
 Nhập text vào element theo từng ký tự một.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.TypeText(xpath: string, content: string, xml?: string, isDontClearText?: boolean): boolean
@@ -655,7 +655,7 @@ d.TypeText(xpath: string, content: string, xml?: string, isDontClearText?: boole
 
 Bấm key code cụ thể.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.InputKeyCode(keyCode: number): boolean
@@ -675,7 +675,7 @@ d.InputKeyCode(keyCode: number): boolean
 
 Bấm phím Enter.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.InputEnter(): boolean
@@ -689,7 +689,7 @@ d.InputEnter(): boolean
 
 Bấm phím End (di chuyển con trỏ về cuối).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.InputEnd(): boolean
@@ -703,7 +703,7 @@ d.InputEnd(): boolean
 
 Xóa text trong element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ClearText(xpath?: string, xml?: string): boolean
@@ -724,7 +724,7 @@ d.ClearText(xpath?: string, xml?: string): boolean
 
 Đặt ADB keyboard làm input method mặc định.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SetAdbKeyboard(): boolean
@@ -738,7 +738,7 @@ d.SetAdbKeyboard(): boolean
 
 Ẩn ADB keyboard.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.HideAdbKeyboard(): void
@@ -750,7 +750,7 @@ d.HideAdbKeyboard(): void
 
 Chụp ảnh màn hình, có thể crop theo element.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ScreenShot(xpath?: string, xml?: string): string
@@ -773,7 +773,7 @@ d.ScreenShot(xpath?: string, xml?: string): string
 
 Thực thi câu lệnh shell trên thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.Shell(command: string): string
@@ -793,7 +793,7 @@ d.Shell(command: string): string
 
 Kiểm tra điện thoại có bị mất kết nối không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.IsClosed(): boolean
@@ -807,7 +807,7 @@ d.IsClosed(): boolean
 
 Lấy thông tin thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DeviceInfo(): string
@@ -821,7 +821,7 @@ d.DeviceInfo(): string
 
 Lấy kích thước màn hình thiết bị dạng chuỗi.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DeviceSize(): string
@@ -835,7 +835,7 @@ d.DeviceSize(): string
 
 Lấy chiều cao màn hình thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DeviceHeight(): number
@@ -849,7 +849,7 @@ d.DeviceHeight(): number
 
 Lấy chiều rộng màn hình thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DeviceWidth(): number
@@ -863,7 +863,7 @@ d.DeviceWidth(): number
 
 Lấy địa chỉ IP của thiết bị trên mạng hiện tại (LAN IP).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetDeviceIP(): string
@@ -877,7 +877,7 @@ d.GetDeviceIP(): string
 
 Đổi ngôn ngữ thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ChangeLanguage(lang: string): boolean
@@ -897,7 +897,7 @@ d.ChangeLanguage(lang: string): boolean
 
 Đặt hình nền thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SetWallpaper(imagePath: string, wallpaperType: string): boolean
@@ -918,7 +918,7 @@ d.SetWallpaper(imagePath: string, wallpaperType: string): boolean
 
 Kiểm tra màn hình có đang bật không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.IsScreenOn(): boolean
@@ -932,7 +932,7 @@ d.IsScreenOn(): boolean
 
 Tắt màn hình.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SleepScreen(): void
@@ -944,7 +944,7 @@ d.SleepScreen(): void
 
 Mở khóa màn hình bằng thao tác vuốt.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.UnlockScreen(): void
@@ -956,7 +956,7 @@ d.UnlockScreen(): void
 
 Bật WiFi.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.EnableWifi(): void
@@ -968,7 +968,7 @@ d.EnableWifi(): void
 
 Tắt WiFi.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DisableWifi(): void
@@ -980,7 +980,7 @@ d.DisableWifi(): void
 
 Kết nối WiFi.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ConnectWifi(wifiName: string, wifiPass: string): boolean
@@ -1001,7 +1001,7 @@ d.ConnectWifi(wifiName: string, wifiPass: string): boolean
 
 Create folder on device
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.CreateFolder(folderPath: string): void
@@ -1019,7 +1019,7 @@ d.CreateFolder(folderPath: string): void
 
 Delete folder on device
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DeleteFolder(folderPath: string): void
@@ -1037,7 +1037,7 @@ d.DeleteFolder(folderPath: string): void
 
 Delete file on device
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DeleteFile(path: string): void
@@ -1055,7 +1055,7 @@ d.DeleteFile(path: string): void
 
 Pull file từ thiết bị về PC.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.PullFile(filePath: string, folderPath: string): void
@@ -1074,7 +1074,7 @@ d.PullFile(filePath: string, folderPath: string): void
 
 Push file từ PC sang thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.PushFile(filePath: string, folderPath: string): void
@@ -1093,7 +1093,7 @@ d.PushFile(filePath: string, folderPath: string): void
 
 Push ảnh vào gallery thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.PushImage(filePath: string): void
@@ -1111,7 +1111,7 @@ d.PushImage(filePath: string): void
 
 Push file media vào gallery thiết bị (ảnh và video).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.PushMedia(filePaths: string[]): void
@@ -1129,7 +1129,7 @@ d.PushMedia(filePaths: string[]): void
 
 Get current IP address of proxy
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.CheckProxy(proxy?: string, web?: string): string
@@ -1150,7 +1150,7 @@ d.CheckProxy(proxy?: string, web?: string): string
 
 Kết nối proxy.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ConnectProxy(proxy: string): void
@@ -1168,7 +1168,7 @@ d.ConnectProxy(proxy: string): void
 
 Ngắt kết nối proxy.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DisconnectProxy(): void
@@ -1180,7 +1180,7 @@ d.DisconnectProxy(): void
 
 Lấy nội dung clipboard.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetClipboard(): string
@@ -1194,7 +1194,7 @@ d.GetClipboard(): string
 
 Đặt nội dung clipboard.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.SetClipboard(content: string): void
@@ -1214,7 +1214,7 @@ d.SetClipboard(content: string): void
 
 Mở app theo package name.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.OpenApp(package: string, isKill?: boolean, timeout?: number): boolean
@@ -1236,7 +1236,7 @@ d.OpenApp(package: string, isKill?: boolean, timeout?: number): boolean
 
 Đóng app theo package.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.CloseApp(package: string): void
@@ -1254,7 +1254,7 @@ d.CloseApp(package: string): void
 
 Kiểm tra app có đang ở foreground không.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.IsAppOpened(package: string): boolean
@@ -1274,7 +1274,7 @@ d.IsAppOpened(package: string): boolean
 
 Lấy app đang ở foreground.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetCurrentApp(): string
@@ -1288,7 +1288,7 @@ d.GetCurrentApp(): string
 
 Kiểm tra app đã cài hay chưa.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.IsAppInstalled(package: string): boolean
@@ -1308,7 +1308,7 @@ d.IsAppInstalled(package: string): boolean
 
 Xóa dữ liệu app.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.ClearDataApp(package: string): void
@@ -1326,7 +1326,7 @@ d.ClearDataApp(package: string): void
 
 Lấy phiên bản app.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetAppVersion(package: string): string
@@ -1346,7 +1346,7 @@ d.GetAppVersion(package: string): string
 
 Cài app từ file APK.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.InstallApp(apkPath: string): void
@@ -1364,7 +1364,7 @@ d.InstallApp(apkPath: string): void
 
 Gỡ app.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.UninstallApp(package: string): void
@@ -1382,7 +1382,7 @@ d.UninstallApp(package: string): void
 
 Lấy thông tin app.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetInfoApp(package: string): string
@@ -1402,7 +1402,7 @@ d.GetInfoApp(package: string): string
 
 Lấy danh sách tất cả package trên thiết bị.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetListApps(): string[]
@@ -1416,7 +1416,7 @@ d.GetListApps(): string[]
 
 Lấy danh sách package đã cài (loại trừ system app).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetListAppsInstalled(): string[]
@@ -1430,7 +1430,7 @@ d.GetListAppsInstalled(): string[]
 
 Lấy activity đang ở foreground.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.GetCurrentActivity(): string
@@ -1444,7 +1444,7 @@ d.GetCurrentActivity(): string
 
 Khởi động Android activity.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.StartActivity(activity: string): void
@@ -1464,7 +1464,7 @@ d.StartActivity(activity: string): void
 
 Mở Facebook app với LoginActivity.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.OpenAppFB(package: string, isKill?: boolean, timeout?: number): boolean
@@ -1486,7 +1486,7 @@ d.OpenAppFB(package: string, isKill?: boolean, timeout?: number): boolean
 
 Mở URL scheme trong Facebook app (vd: "fb://profile/123").
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.OpenUrlSchemeFB(link: string): void
@@ -1504,7 +1504,7 @@ d.OpenUrlSchemeFB(link: string): void
 
 Backup dữ liệu app (cần root).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.BackupAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
@@ -1525,7 +1525,7 @@ d.BackupAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
 
 Restore dữ liệu app từ backup (cần root).
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.RestoreAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
@@ -1548,7 +1548,7 @@ d.RestoreAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
 
 Mở URL scheme trong Instagram app (vd: "instagram://user?username=xxx").
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.OpenUrlSchemeIG(link: string): void
@@ -1568,7 +1568,7 @@ d.OpenUrlSchemeIG(link: string): void
 
 Mở URL scheme trong Facebook Lite app.
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.OpenUrlSchemeFBLite(link: string): void
@@ -1588,7 +1588,7 @@ d.OpenUrlSchemeFBLite(link: string): void
 
 Delay execution
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.Delay(delay: number): void
@@ -1606,7 +1606,7 @@ d.Delay(delay: number): void
 
 Delay random time
 
-**Chữ ký**
+**Cú pháp**
 
 ```typescript
 d.DelayRandom(min: number, max: number): void

@@ -68,7 +68,7 @@
 
 บันทึกข้อความลง execution log แบบเรียลไทม์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 Log(msg: any): void
@@ -86,7 +86,7 @@ Log(msg: any): void
 
 กำหนดข้อความความคืบหน้าแบบเรียลไทม์ของ workflow ปัจจุบัน (เช่น แสดงบน status bar ของ host UI) โดยส่งผ่าน MessageCallback hook ฝั่ง Go
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 SetMessage(msg: any): void
@@ -104,7 +104,7 @@ SetMessage(msg: any): void
 
 หน่วงเวลาการทำงาน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 Delay(delay: number): void
@@ -122,7 +122,7 @@ Delay(delay: number): void
 
 Alias ของ Delay
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 DelayTime(delay: number): void
@@ -140,7 +140,7 @@ DelayTime(delay: number): void
 
 หน่วงเวลาแบบสุ่ม
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 DelayRandom(min: number, max: number): void
@@ -159,7 +159,7 @@ DelayRandom(min: number, max: number): void
 
 ส่ง HTTP request
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 HttpRequest(method: string, url: string, contentType: string, headers: string, body: string, timeout: number): string
@@ -184,7 +184,7 @@ HttpRequest(method: string, url: string, contentType: string, headers: string, b
 
 สร้างรหัส TOTP จาก secret key (2FA)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 GetOtp2FA(secret: string): string
@@ -204,7 +204,7 @@ GetOtp2FA(secret: string): string
 
 Alias ของ GetOtp2FA
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 GetTotp(secret: string): string
@@ -226,7 +226,7 @@ GetTotp(secret: string): string
 
 สุ่มจำนวนเต็มระหว่าง min และ max
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RandomNumber(min: number, max: number): number
@@ -247,7 +247,7 @@ RandomNumber(min: number, max: number): number
 
 Alias ของ RandomNumber
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RandomInt(min: number, max: number): number
@@ -268,7 +268,7 @@ RandomInt(min: number, max: number): number
 
 สร้างจำนวนเต็มสุ่มที่มี N หลัก (เช่น length=4 → 1000-9999)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 Random(length: number): number
@@ -288,7 +288,7 @@ Random(length: number): number
 
 สร้าง string สุ่ม
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RandomString(length: number, typeRandom?: string): string
@@ -309,7 +309,7 @@ RandomString(length: number, typeRandom?: string): string
 
 สุ่ม boolean ตามเปอร์เซ็นต์ของค่า true ที่กำหนด
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RandomBool(percent: number): boolean
@@ -329,7 +329,7 @@ RandomBool(percent: number): boolean
 
 เลือกสมาชิกแบบสุ่มจากอาร์เรย์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RandomItem(arr: string[]): string
@@ -351,7 +351,7 @@ RandomItem(arr: string[]): string
 
 Spin text — เลือกตัวเลือกแบบสุ่มจากรูปแบบ spin
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 SpinText(text: string): string
@@ -371,7 +371,7 @@ SpinText(text: string): string
 
 แทนที่ string ทุกตำแหน่งที่พบ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 Replace(s: string, old: string, newStr: string): string
@@ -393,7 +393,7 @@ Replace(s: string, old: string, newStr: string): string
 
 ลบ emoji / icon ออกจาก string
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RemoveIcon(text: string): string
@@ -413,7 +413,7 @@ RemoveIcon(text: string): string
 
 แปลงข้อความเวียดนามที่มีวรรณยุกต์เป็นแบบไม่มีวรรณยุกต์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 ConvertToUnSign(text: string): string
@@ -433,7 +433,7 @@ ConvertToUnSign(text: string): string
 
 ตรวจสอบว่าข้อความเป็นชื่อภาษาเวียดนามที่ถูกต้องหรือไม่ (ตรงตาม pattern + วรรณยุกต์)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 IsVNName(text: string): boolean
@@ -455,7 +455,7 @@ IsVNName(text: string): boolean
 
 Decode string base64
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 DecodeBase64(encoded: string): string
@@ -475,7 +475,7 @@ DecodeBase64(encoded: string): string
 
 Encode string เป็น base64
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 EncodeBase64(text: string): string
@@ -497,7 +497,7 @@ EncodeBase64(text: string): string
 
 Match regex และดึง group ที่ระบุ
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RegexGroups1(input: string, pattern: string, index: number): string
@@ -519,7 +519,7 @@ RegexGroups1(input: string, pattern: string, index: number): string
 
 Match regex และคืนค่า group ทั้งหมดที่ capture ได้
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RegexGroups(input: string, pattern: string): string[]
@@ -542,7 +542,7 @@ RegexGroups(input: string, pattern: string): string[]
 
 ตรวจสอบว่าไฟล์หรือโฟลเดอร์มีอยู่หรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 ExistsPath(path: string): boolean
@@ -562,7 +562,7 @@ ExistsPath(path: string): boolean
 
 สร้างโฟลเดอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 CreateFolder(folderPath: string): boolean
@@ -582,7 +582,7 @@ CreateFolder(folderPath: string): boolean
 
 ลบโฟลเดอร์รวมทั้งเนื้อหาทั้งหมด
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 DeleteFolder(folderPath: string): boolean
@@ -602,7 +602,7 @@ DeleteFolder(folderPath: string): boolean
 
 แสดงรายการโฟลเดอร์ย่อยในโฟลเดอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 ListFolders(folderPath: string, folderPrefix?: string): string[]
@@ -623,7 +623,7 @@ ListFolders(folderPath: string, folderPrefix?: string): string[]
 
 อ่านเนื้อหาไฟล์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 ReadFile(filePath: string): string
@@ -643,7 +643,7 @@ ReadFile(filePath: string): string
 
 ต่อท้าย (append) เนื้อหาในไฟล์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 AppendFile(filePath: string, content: string): boolean
@@ -664,7 +664,7 @@ AppendFile(filePath: string, content: string): boolean
 
 เขียนเนื้อหาลงไฟล์ (เขียนทับ)
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 WriteFile(filePath: string, content: string): boolean
@@ -685,7 +685,7 @@ WriteFile(filePath: string, content: string): boolean
 
 ลบไฟล์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 DeleteFile(filePath: string): boolean
@@ -705,7 +705,7 @@ DeleteFile(filePath: string): boolean
 
 แสดงรายการไฟล์ในโฟลเดอร์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 ListFiles(folderPath: string, extensions?: string): string[]
@@ -726,7 +726,7 @@ ListFiles(folderPath: string, extensions?: string): string[]
 
 บันทึกข้อมูล (URL หรือ base64) ลงไฟล์
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 SaveAssets(data: string, filePath: string): boolean
@@ -749,7 +749,7 @@ SaveAssets(data: string, filePath: string): boolean
 
 ตรวจสอบ proxy และดึง IP ปัจจุบัน
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 CheckProxy(proxy: string, typeProxy: number, timeout: number): string
@@ -773,7 +773,7 @@ CheckProxy(proxy: string, typeProxy: number, timeout: number): string
 
 ดึงค่า string จาก JSON ตาม path
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 JsonGetString(json: string, path: string): string
@@ -794,7 +794,7 @@ JsonGetString(json: string, path: string): string
 
 ดึงค่า integer จาก JSON ตาม path
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 JsonGetInt(json: string, path: string): number
@@ -815,7 +815,7 @@ JsonGetInt(json: string, path: string): number
 
 ดึงค่า boolean จาก JSON ตาม path
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 JsonGetBool(json: string, path: string): boolean
@@ -838,7 +838,7 @@ JsonGetBool(json: string, path: string): boolean
 
 ตรวจสอบว่าเป็น Facebook UID ที่ถูกต้องหรือไม่
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 IsUidFB(input: string): boolean
@@ -858,7 +858,7 @@ IsUidFB(input: string): boolean
 
 Alias ของ IsUidFB
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 IsUid(input: string): boolean
@@ -878,7 +878,7 @@ IsUid(input: string): boolean
 
 ตรวจสอบสถานะ live ของ Facebook UID ผ่าน wall request
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 CheckLiveUidFB(uid: string, proxy: string): number
@@ -901,7 +901,7 @@ CheckLiveUidFB(uid: string, proxy: string): number
 
 แก้ captcha รูปภาพเป็นข้อความผ่าน OmoCaptcha
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 OmoCaptcha_ImageToText(apiKey: string, base64Image: string): string
@@ -924,7 +924,7 @@ OmoCaptcha_ImageToText(apiKey: string, base64Image: string): string
 
 ยึด lock ตามชื่อ (block จนกว่าจะได้), รัน callback, ปล่อย lock อัตโนมัติ ใช้ปกป้อง critical section เมื่อมีหลาย script ทำงานพร้อมกันและแตะทรัพยากรเดียวกัน (ไฟล์, อุปกรณ์ ฯลฯ) คำเตือน: NOT REENTRANT — การเรียกซ้อนชื่อเดียวกันจะเกิด deadlock ถาวร
 
-**ลายเซ็น**
+**ไวยากรณ์**
 
 ```typescript
 RunWithLock(name: string, fn: () => void): void

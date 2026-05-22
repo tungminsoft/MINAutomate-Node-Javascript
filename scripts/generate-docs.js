@@ -47,7 +47,7 @@ const I18N_STATIC = {
   vi: {
     totalFunctions: "Tổng số hàm",
     toc: "Mục lục",
-    signature: "Chữ ký",
+    signature: "Cú pháp",
     parameters: "Tham số",
     returns: "Trả về",
     optional: "tùy chọn",
@@ -61,7 +61,7 @@ const I18N_STATIC = {
   th: {
     totalFunctions: "จำนวนฟังก์ชันทั้งหมด",
     toc: "สารบัญ",
-    signature: "ลายเซ็น",
+    signature: "ไวยากรณ์",
     parameters: "พารามิเตอร์",
     returns: "คืนค่า",
     optional: "ไม่บังคับ",
