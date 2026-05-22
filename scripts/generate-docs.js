@@ -192,7 +192,12 @@ function localize(fn, translations, ns, labels) {
 }
 
 function slug(name) {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  // Match GitHub heading anchor algorithm: lowercase, spaces → dash, strip other punctuation
+  // (dots are REMOVED, not replaced with dash — so `d.PerformAction` → `dperformaction`).
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9_\-]/g, "");
 }
 
 function renderSignature(fn, prefix) {

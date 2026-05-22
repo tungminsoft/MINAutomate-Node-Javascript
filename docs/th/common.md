@@ -56,7 +56,7 @@
   - [IsUid](#isuid)
   - [CheckLiveUidFB](#checkliveuidfb)
 - **Captcha**
-  - [OmoCaptcha_ImageToText](#omocaptcha-imagetotext)
+  - [OmoCaptcha_ImageToText](#omocaptcha_imagetotext)
 - **การล็อกพร้อมกัน**
   - [RunWithLock](#runwithlock)
 
