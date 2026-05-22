@@ -3,3 +3,7 @@ node_modules/
 .DS_Store
 .vscode/
 .idea/
+
+# Internal development artifacts — not part of public docs
+plans/
+docs-internal/
