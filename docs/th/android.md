@@ -1,0 +1,1622 @@
+# Android — `d.*`
+
+> API ควบคุมอุปกรณ์ ใช้ได้เมื่อ workflow ทำงานบนอุปกรณ์ Android ผ่าน ADB
+
+**จำนวนฟังก์ชันทั้งหมด:** 82
+
+## สารบัญ
+
+- **ฟังก์ชันโต้ตอบ**
+  - [d.PerformAction](#d-performaction)
+  - [d.Back](#d-back)
+  - [d.DumpXml](#d-dumpxml)
+  - [d.DetectScreen](#d-detectscreen)
+  - [d.ExistElement](#d-existelement)
+  - [d.ExistElements](#d-existelements)
+  - [d.ExistAllElements](#d-existallelements)
+  - [d.CountElement](#d-countelement)
+  - [d.WaitElementHide](#d-waitelementhide)
+  - [d.GetElementAttr](#d-getelementattr)
+  - [d.TapXY](#d-tapxy)
+  - [d.Tap](#d-tap)
+  - [d.TapCenter](#d-tapcenter)
+  - [d.DoubleTapXY](#d-doubletapxy)
+  - [d.TapLongXY](#d-taplongxy)
+  - [d.TapLong](#d-taplong)
+  - [d.TapLongCenter](#d-taplongcenter)
+  - [d.Swipe](#d-swipe)
+  - [d.SwipeUp](#d-swipeup)
+  - [d.SwipeDown](#d-swipedown)
+  - [d.SwipeLeft](#d-swipeleft)
+  - [d.SwipeRight](#d-swiperight)
+  - [d.SwipeXpath](#d-swipexpath)
+  - [d.SwipeAndTap](#d-swipeandtap)
+  - [d.InputText](#d-inputtext)
+  - [d.TypeText](#d-typetext)
+  - [d.InputKeyCode](#d-inputkeycode)
+  - [d.InputEnter](#d-inputenter)
+  - [d.InputEnd](#d-inputend)
+  - [d.ClearText](#d-cleartext)
+  - [d.SetAdbKeyboard](#d-setadbkeyboard)
+  - [d.HideAdbKeyboard](#d-hideadbkeyboard)
+  - [d.ScreenShot](#d-screenshot)
+- **ฟังก์ชันอุปกรณ์**
+  - [d.Shell](#d-shell)
+  - [d.IsClosed](#d-isclosed)
+  - [d.DeviceInfo](#d-deviceinfo)
+  - [d.DeviceSize](#d-devicesize)
+  - [d.DeviceHeight](#d-deviceheight)
+  - [d.DeviceWidth](#d-devicewidth)
+  - [d.GetDeviceIP](#d-getdeviceip)
+  - [d.ChangeLanguage](#d-changelanguage)
+  - [d.SetWallpaper](#d-setwallpaper)
+  - [d.IsScreenOn](#d-isscreenon)
+  - [d.SleepScreen](#d-sleepscreen)
+  - [d.UnlockScreen](#d-unlockscreen)
+  - [d.EnableWifi](#d-enablewifi)
+  - [d.DisableWifi](#d-disablewifi)
+  - [d.ConnectWifi](#d-connectwifi)
+  - [d.CreateFolder](#d-createfolder)
+  - [d.DeleteFolder](#d-deletefolder)
+  - [d.DeleteFile](#d-deletefile)
+  - [d.PullFile](#d-pullfile)
+  - [d.PushFile](#d-pushfile)
+  - [d.PushImage](#d-pushimage)
+  - [d.PushMedia](#d-pushmedia)
+  - [d.CheckProxy](#d-checkproxy)
+  - [d.ConnectProxy](#d-connectproxy)
+  - [d.DisconnectProxy](#d-disconnectproxy)
+  - [d.GetClipboard](#d-getclipboard)
+  - [d.SetClipboard](#d-setclipboard)
+- **ฟังก์ชันแอป**
+  - [d.OpenApp](#d-openapp)
+  - [d.CloseApp](#d-closeapp)
+  - [d.IsAppOpened](#d-isappopened)
+  - [d.GetCurrentApp](#d-getcurrentapp)
+  - [d.IsAppInstalled](#d-isappinstalled)
+  - [d.ClearDataApp](#d-cleardataapp)
+  - [d.GetAppVersion](#d-getappversion)
+  - [d.InstallApp](#d-installapp)
+  - [d.UninstallApp](#d-uninstallapp)
+  - [d.GetInfoApp](#d-getinfoapp)
+  - [d.GetListApps](#d-getlistapps)
+  - [d.GetListAppsInstalled](#d-getlistappsinstalled)
+  - [d.GetCurrentActivity](#d-getcurrentactivity)
+  - [d.StartActivity](#d-startactivity)
+- **Facebook**
+  - [d.OpenAppFB](#d-openappfb)
+  - [d.OpenUrlSchemeFB](#d-openurlschemefb)
+  - [d.BackupAppFB](#d-backupappfb)
+  - [d.RestoreAppFB](#d-restoreappfb)
+- **ฟังก์ชัน Instagram**
+  - [d.OpenUrlSchemeIG](#d-openurlschemeig)
+- **Facebook Lite**
+  - [d.OpenUrlSchemeFBLite](#d-openurlschemefblite)
+- **ฟังก์ชันอื่น ๆ**
+  - [d.Delay](#d-delay)
+  - [d.DelayRandom](#d-delayrandom)
+
+---
+
+## ฟังก์ชันโต้ตอบ
+
+### d.PerformAction
+
+ทำ system action
+
+**ลายเซ็น**
+
+```typescript
+d.PerformAction(typeAction: number): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `typeAction` | `number` | 1: Home, 2: Back, 3: Recent apps |
+
+---
+
+### d.Back
+
+กดปุ่ม Back หลายครั้ง
+
+**ลายเซ็น**
+
+```typescript
+d.Back(count?: number, delay?: number): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `count` | `number *(ไม่บังคับ)*` | จำนวนครั้งที่กด Back (ค่าเริ่มต้น: 1) |
+| `delay` | `number *(ไม่บังคับ)*` | เวลาห่างระหว่างกดเป็นวินาที (ค่าเริ่มต้น: 1) |
+
+---
+
+### d.DumpXml
+
+Dump XML hierarchy ของหน้าจอ
+
+**ลายเซ็น**
+
+```typescript
+d.DumpXml(): string
+```
+
+**คืนค่า** `string` — String XML
+
+---
+
+### d.DetectScreen
+
+ตรวจจับหน้าจอปัจจุบัน
+
+**ลายเซ็น**
+
+```typescript
+d.DetectScreen(xml?: string): string
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+
+**คืนค่า** `string` — ตัวระบุประเภทหน้าจอ
+
+---
+
+### d.ExistElement
+
+ตรวจสอบว่า element มีอยู่หรือไม่
+
+**ลายเซ็น**
+
+```typescript
+d.ExistElement(xpath: string, xml?: string, timeout?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `timeout` | `number *(ไม่บังคับ)*` | Timeout เป็นวินาที (ค่าเริ่มต้น: 0) |
+
+**คืนค่า** `boolean` — True ถ้า element มีอยู่
+
+---
+
+### d.ExistElements
+
+ตรวจสอบว่ามี element ใดในรายการอยู่หรือไม่
+
+**ลายเซ็น**
+
+```typescript
+d.ExistElements(timeout: number, xml: string, lstXpath: string[]): string
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `timeout` | `number` | Timeout เป็นวินาที (ค่าเริ่มต้น: 0) |
+| `xml` | `string` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `lstXpath` | `string[]` | อาร์เรย์ Xpath selector |
+
+**คืนค่า** `string` — Xpath ของ element แรกที่พบ หรือ string ว่าง
+
+---
+
+### d.ExistAllElements
+
+ตรวจสอบว่า element ทั้งหมดมีอยู่หรือไม่
+
+**ลายเซ็น**
+
+```typescript
+d.ExistAllElements(lstXpath: string[], xml?: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `lstXpath` | `string[]` | อาร์เรย์ Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+
+**คืนค่า** `boolean` — True ถ้ามีอยู่ทั้งหมด
+
+---
+
+### d.CountElement
+
+นับจำนวน element ที่ match xpath
+
+**ลายเซ็น**
+
+```typescript
+d.CountElement(xpath: string, xml?: string): number
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+
+**คืนค่า** `number` — จำนวน element ที่ match
+
+---
+
+### d.WaitElementHide
+
+รอจนกว่า element จะหายไป
+
+**ลายเซ็น**
+
+```typescript
+d.WaitElementHide(xpath: string, timeout: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `timeout` | `number` | Timeout เป็นวินาที |
+
+**คืนค่า** `boolean` — True ถ้า element หายไปแล้ว
+
+---
+
+### d.GetElementAttr
+
+ดึงค่า attribute ของ element ที่ match xpath
+
+**ลายเซ็น**
+
+```typescript
+d.GetElementAttr(xml: string, xpath: string, attribute: string): string[]
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xml` | `string` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `xpath` | `string` | Xpath selector |
+| `attribute` | `string` | ชื่อ attribute (เช่น "text", "bounds", "content-desc") |
+
+**คืนค่า** `string[]` — อาร์เรย์ค่า attribute
+
+---
+
+### d.TapXY
+
+แตะที่พิกัดที่ระบุ
+
+**ลายเซ็น**
+
+```typescript
+d.TapXY(x: number, y: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `x` | `number` | พิกัด X |
+| `y` | `number` | พิกัด Y |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.Tap
+
+แตะ element ตาม xpath
+
+**ลายเซ็น**
+
+```typescript
+d.Tap(xpath: string, xml?: string, timeFind?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `timeFind` | `number *(ไม่บังคับ)*` | Timeout เป็นวินาทีในการค้นหา element (ค่าเริ่มต้น: 0) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.TapCenter
+
+แตะตรงกลาง element ตาม xpath
+
+**ลายเซ็น**
+
+```typescript
+d.TapCenter(xpath: string, xml?: string, timeFind?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `timeFind` | `number *(ไม่บังคับ)*` | Timeout เป็นวินาทีในการค้นหา element (ค่าเริ่มต้น: 0) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.DoubleTapXY
+
+แตะสองครั้งที่พิกัดที่ระบุ
+
+**ลายเซ็น**
+
+```typescript
+d.DoubleTapXY(x: number, y: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `x` | `number` | พิกัด X |
+| `y` | `number` | พิกัด Y |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.TapLongXY
+
+แตะค้างที่พิกัดที่ระบุ
+
+**ลายเซ็น**
+
+```typescript
+d.TapLongXY(x: number, y: number, delay?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `x` | `number` | พิกัด X |
+| `y` | `number` | พิกัด Y |
+| `delay` | `number *(ไม่บังคับ)*` | ระยะเวลาค้างเป็นวินาที (ค่าเริ่มต้น: 1) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.TapLong
+
+แตะค้างที่ element
+
+**ลายเซ็น**
+
+```typescript
+d.TapLong(xpath: string, xml?: string, delay?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `delay` | `number *(ไม่บังคับ)*` | ระยะเวลาค้างเป็นวินาที (ค่าเริ่มต้น: 1) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.TapLongCenter
+
+แตะค้างที่ตรงกลาง element
+
+**ลายเซ็น**
+
+```typescript
+d.TapLongCenter(xpath: string, xml?: string, delay?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `delay` | `number *(ไม่บังคับ)*` | ระยะเวลาค้างเป็นวินาที (ค่าเริ่มต้น: 1) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.Swipe
+
+ปัดจากจุดหนึ่งไปอีกจุดหนึ่ง
+
+**ลายเซ็น**
+
+```typescript
+d.Swipe(x1: number, y1: number, x2: number, y2: number, steps?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `x1` | `number` | X เริ่มต้น |
+| `y1` | `number` | Y เริ่มต้น |
+| `x2` | `number` | X สิ้นสุด |
+| `y2` | `number` | Y สิ้นสุด |
+| `steps` | `number *(ไม่บังคับ)*` | จำนวน step (มาก = ช้าลง, 0 = สุ่ม 30-40) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.SwipeUp
+
+ปัดขึ้น
+
+**ลายเซ็น**
+
+```typescript
+d.SwipeUp(count?: number, checkScreenChange?: boolean): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `count` | `number *(ไม่บังคับ)*` | จำนวนครั้ง |
+| `checkScreenChange` | `boolean *(ไม่บังคับ)*` | ถ้า true จะปัดจนหน้าจอไม่เปลี่ยน (ค่าเริ่มต้น: false) |
+
+**คืนค่า** `boolean` — True ถ้าหน้าจอหยุดเปลี่ยน (เฉพาะเมื่อ checkScreenChange = true)
+
+---
+
+### d.SwipeDown
+
+ปัดลง
+
+**ลายเซ็น**
+
+```typescript
+d.SwipeDown(count?: number, checkScreenChange?: boolean): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `count` | `number *(ไม่บังคับ)*` | จำนวนครั้ง |
+| `checkScreenChange` | `boolean *(ไม่บังคับ)*` | ถ้า true จะปัดจนหน้าจอไม่เปลี่ยน (ค่าเริ่มต้น: false) |
+
+**คืนค่า** `boolean` — True ถ้าหน้าจอหยุดเปลี่ยน (เฉพาะเมื่อ checkScreenChange = true)
+
+---
+
+### d.SwipeLeft
+
+ปัดซ้าย
+
+**ลายเซ็น**
+
+```typescript
+d.SwipeLeft(count?: number, checkScreenChange?: boolean): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `count` | `number *(ไม่บังคับ)*` | จำนวนครั้ง |
+| `checkScreenChange` | `boolean *(ไม่บังคับ)*` | ถ้า true จะปัดจนหน้าจอไม่เปลี่ยน (ค่าเริ่มต้น: false) |
+
+**คืนค่า** `boolean` — True ถ้าหน้าจอหยุดเปลี่ยน (เฉพาะเมื่อ checkScreenChange = true)
+
+---
+
+### d.SwipeRight
+
+ปัดขวา
+
+**ลายเซ็น**
+
+```typescript
+d.SwipeRight(count?: number, checkScreenChange?: boolean): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `count` | `number *(ไม่บังคับ)*` | จำนวนครั้ง |
+| `checkScreenChange` | `boolean *(ไม่บังคับ)*` | ถ้า true จะปัดจนหน้าจอไม่เปลี่ยน (ค่าเริ่มต้น: false) |
+
+**คืนค่า** `boolean` — True ถ้าหน้าจอหยุดเปลี่ยน (เฉพาะเมื่อ checkScreenChange = true)
+
+---
+
+### d.SwipeXpath
+
+ปัดจาก element หนึ่งไปอีก element หนึ่ง
+
+**ลายเซ็น**
+
+```typescript
+d.SwipeXpath(xpathFrom: string, xpathTo: string, xml?: string, steps?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpathFrom` | `string` | Xpath ของ element เริ่ม |
+| `xpathTo` | `string` | Xpath ของ element สิ้นสุด |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `steps` | `number *(ไม่บังคับ)*` | จำนวน step (มาก = ช้าลง, 0 = สุ่ม 30-40) |
+
+**คืนค่า** `boolean` — Success status
+
+---
+
+### d.SwipeAndTap
+
+ปัดและแตะ element เมื่อพบ
+
+**ลายเซ็น**
+
+```typescript
+d.SwipeAndTap(xpath: string, xml?: string, timeout?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `timeout` | `number *(ไม่บังคับ)*` | Timeout เป็นวินาที (ค่าเริ่มต้น: 0) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.InputText
+
+ป้อนข้อความลง element
+
+**ลายเซ็น**
+
+```typescript
+d.InputText(xpath: string, content: string, xml?: string, isDontClearText?: boolean): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector (ว่างเพื่อป้อนที่ focus ปัจจุบัน) |
+| `content` | `string` | ข้อความที่จะป้อน |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `isDontClearText` | `boolean *(ไม่บังคับ)*` | ถ้า true จะ append โดยไม่ลบของเดิม (ค่าเริ่มต้น: false) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.TypeText
+
+ป้อนข้อความลง element ทีละอักษร
+
+**ลายเซ็น**
+
+```typescript
+d.TypeText(xpath: string, content: string, xml?: string, isDontClearText?: boolean): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string` | Xpath selector (ว่างเพื่อป้อนที่ focus ปัจจุบัน) |
+| `content` | `string` | ข้อความที่จะป้อน |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+| `isDontClearText` | `boolean *(ไม่บังคับ)*` | ถ้า true จะ append โดยไม่ลบของเดิม (ค่าเริ่มต้น: false) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.InputKeyCode
+
+กด key code ที่ระบุ
+
+**ลายเซ็น**
+
+```typescript
+d.InputKeyCode(keyCode: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `keyCode` | `number` | Android key code |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.InputEnter
+
+กดปุ่ม Enter
+
+**ลายเซ็น**
+
+```typescript
+d.InputEnter(): boolean
+```
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.InputEnd
+
+กดปุ่ม End (เลื่อน cursor ไปท้าย)
+
+**ลายเซ็น**
+
+```typescript
+d.InputEnd(): boolean
+```
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.ClearText
+
+ล้างข้อความใน element
+
+**ลายเซ็น**
+
+```typescript
+d.ClearText(xpath?: string, xml?: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string *(ไม่บังคับ)*` | Xpath selector |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.SetAdbKeyboard
+
+ตั้ง ADB keyboard เป็น input method หลัก
+
+**ลายเซ็น**
+
+```typescript
+d.SetAdbKeyboard(): boolean
+```
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.HideAdbKeyboard
+
+ซ่อน ADB keyboard
+
+**ลายเซ็น**
+
+```typescript
+d.HideAdbKeyboard(): void
+```
+
+---
+
+### d.ScreenShot
+
+ถ่ายภาพหน้าจอ สามารถ crop ตาม element ได้
+
+**ลายเซ็น**
+
+```typescript
+d.ScreenShot(xpath?: string, xml?: string): string
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `xpath` | `string *(ไม่บังคับ)*` | Xpath selector เพื่อ crop ตาม bounds ของ element (ไม่บังคับ) |
+| `xml` | `string *(ไม่บังคับ)*` | XML dump (ว่างเพื่อ dump อัตโนมัติ, ไม่บังคับ) |
+
+**คืนค่า** `string` — ภาพ base64
+
+---
+
+## ฟังก์ชันอุปกรณ์
+
+### d.Shell
+
+รันคำสั่ง shell บนอุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.Shell(command: string): string
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `command` | `string` | คำสั่ง shell |
+
+**คืนค่า** `string` — Output ของคำสั่ง
+
+---
+
+### d.IsClosed
+
+ตรวจสอบว่าโทรศัพท์หลุดการเชื่อมต่อหรือไม่
+
+**ลายเซ็น**
+
+```typescript
+d.IsClosed(): boolean
+```
+
+**คืนค่า** `boolean` — True ถ้าหลุดการเชื่อมต่อ
+
+---
+
+### d.DeviceInfo
+
+ดึงข้อมูลอุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.DeviceInfo(): string
+```
+
+**คืนค่า** `string` — String ข้อมูลอุปกรณ์
+
+---
+
+### d.DeviceSize
+
+ดึงขนาดหน้าจออุปกรณ์เป็น string
+
+**ลายเซ็น**
+
+```typescript
+d.DeviceSize(): string
+```
+
+**คืนค่า** `string` — ขนาด (เช่น "1080x1920")
+
+---
+
+### d.DeviceHeight
+
+ดึงความสูงหน้าจออุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.DeviceHeight(): number
+```
+
+**คืนค่า** `number` — ความสูงเป็นพิกเซล
+
+---
+
+### d.DeviceWidth
+
+ดึงความกว้างหน้าจออุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.DeviceWidth(): number
+```
+
+**คืนค่า** `number` — ความกว้างเป็นพิกเซล
+
+---
+
+### d.GetDeviceIP
+
+ดึง IP ของอุปกรณ์บนเครือข่ายปัจจุบัน (LAN IP)
+
+**ลายเซ็น**
+
+```typescript
+d.GetDeviceIP(): string
+```
+
+**คืนค่า** `string` — IP address
+
+---
+
+### d.ChangeLanguage
+
+เปลี่ยนภาษาอุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.ChangeLanguage(lang: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `lang` | `string` | Language code (เช่น "en", "vi") |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.SetWallpaper
+
+ตั้งวอลเปเปอร์ของอุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.SetWallpaper(imagePath: string, wallpaperType: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `imagePath` | `string` | Path local ของไฟล์ภาพ (caller เลือกไว้แล้ว) |
+| `wallpaperType` | `string` | "home", "lock", หรือ "both" |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.IsScreenOn
+
+ตรวจสอบว่าหน้าจอเปิดอยู่หรือไม่
+
+**ลายเซ็น**
+
+```typescript
+d.IsScreenOn(): boolean
+```
+
+**คืนค่า** `boolean` — True ถ้าหน้าจอเปิดอยู่
+
+---
+
+### d.SleepScreen
+
+ปิดหน้าจอ
+
+**ลายเซ็น**
+
+```typescript
+d.SleepScreen(): void
+```
+
+---
+
+### d.UnlockScreen
+
+ปลดล็อกหน้าจอด้วยการปัด
+
+**ลายเซ็น**
+
+```typescript
+d.UnlockScreen(): void
+```
+
+---
+
+### d.EnableWifi
+
+เปิด WiFi
+
+**ลายเซ็น**
+
+```typescript
+d.EnableWifi(): void
+```
+
+---
+
+### d.DisableWifi
+
+ปิด WiFi
+
+**ลายเซ็น**
+
+```typescript
+d.DisableWifi(): void
+```
+
+---
+
+### d.ConnectWifi
+
+เชื่อมต่อ WiFi
+
+**ลายเซ็น**
+
+```typescript
+d.ConnectWifi(wifiName: string, wifiPass: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `wifiName` | `string` | WiFi SSID |
+| `wifiPass` | `string` | รหัสผ่าน WiFi |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.CreateFolder
+
+Create folder on device
+
+**ลายเซ็น**
+
+```typescript
+d.CreateFolder(folderPath: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `folderPath` | `string` | Folder path |
+
+---
+
+### d.DeleteFolder
+
+Delete folder on device
+
+**ลายเซ็น**
+
+```typescript
+d.DeleteFolder(folderPath: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `folderPath` | `string` | Folder path |
+
+---
+
+### d.DeleteFile
+
+Delete file on device
+
+**ลายเซ็น**
+
+```typescript
+d.DeleteFile(path: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `path` | `string` | File path (supports wildcards) |
+
+---
+
+### d.PullFile
+
+Pull ไฟล์จากอุปกรณ์ไปยัง PC
+
+**ลายเซ็น**
+
+```typescript
+d.PullFile(filePath: string, folderPath: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `filePath` | `string` | Path ไฟล์บนอุปกรณ์ |
+| `folderPath` | `string` | Path โฟลเดอร์บน PC เพื่อบันทึก |
+
+---
+
+### d.PushFile
+
+Push ไฟล์จาก PC ไปยังอุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.PushFile(filePath: string, folderPath: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `filePath` | `string` | Path ไฟล์บน PC |
+| `folderPath` | `string` | Path โฟลเดอร์บนอุปกรณ์ (เช่น "/sdcard/") |
+
+---
+
+### d.PushImage
+
+Push ภาพไปยัง gallery ของอุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.PushImage(filePath: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `filePath` | `string` | Path ภาพ local; หลายภาพคั่นด้วย "|" |
+
+---
+
+### d.PushMedia
+
+Push ไฟล์ media ไปยัง gallery (รองรับภาพและวิดีโอ)
+
+**ลายเซ็น**
+
+```typescript
+d.PushMedia(filePaths: string[]): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `filePaths` | `string[]` | อาร์เรย์ path media local |
+
+---
+
+### d.CheckProxy
+
+Get current IP address of proxy
+
+**ลายเซ็น**
+
+```typescript
+d.CheckProxy(proxy?: string, web?: string): string
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `proxy` | `string *(ไม่บังคับ)*` | Proxy string (optional, format: "host:port" or "host:port:user:pass") |
+| `web` | `string *(ไม่บังคับ)*` | URL to check IP (default: "ifconfig.co") |
+
+**คืนค่า** `string` — IP address or error message
+
+---
+
+### d.ConnectProxy
+
+เชื่อมต่อ proxy
+
+**ลายเซ็น**
+
+```typescript
+d.ConnectProxy(proxy: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `proxy` | `string` | String proxy (รูปแบบ: "host:port") |
+
+---
+
+### d.DisconnectProxy
+
+ตัดการเชื่อมต่อ proxy
+
+**ลายเซ็น**
+
+```typescript
+d.DisconnectProxy(): void
+```
+
+---
+
+### d.GetClipboard
+
+ดึงข้อมูล clipboard
+
+**ลายเซ็น**
+
+```typescript
+d.GetClipboard(): string
+```
+
+**คืนค่า** `string` — ข้อความ clipboard
+
+---
+
+### d.SetClipboard
+
+ตั้งข้อมูล clipboard
+
+**ลายเซ็น**
+
+```typescript
+d.SetClipboard(content: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `content` | `string` | ข้อความที่จะตั้ง |
+
+---
+
+## ฟังก์ชันแอป
+
+### d.OpenApp
+
+เปิดแอปตาม package name
+
+**ลายเซ็น**
+
+```typescript
+d.OpenApp(package: string, isKill?: boolean, timeout?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name |
+| `isKill` | `boolean *(ไม่บังคับ)*` | ถ้า true จะ force close แอปก่อนเปิด (ค่าเริ่มต้น: false) |
+| `timeout` | `number *(ไม่บังคับ)*` | Timeout เป็นวินาทีรอแอปเปิด (ค่าเริ่มต้น: 0 = ไม่รอ) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.CloseApp
+
+ปิดแอปตาม package
+
+**ลายเซ็น**
+
+```typescript
+d.CloseApp(package: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package ของแอป |
+
+---
+
+### d.IsAppOpened
+
+ตรวจสอบว่าแอปอยู่ใน foreground หรือไม่
+
+**ลายเซ็น**
+
+```typescript
+d.IsAppOpened(package: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name |
+
+**คืนค่า** `boolean` — True ถ้าแอปอยู่ใน foreground
+
+---
+
+### d.GetCurrentApp
+
+ดึงแอปที่อยู่ใน foreground
+
+**ลายเซ็น**
+
+```typescript
+d.GetCurrentApp(): string
+```
+
+**คืนค่า** `string` — Package ของแอป
+
+---
+
+### d.IsAppInstalled
+
+ตรวจสอบว่าแอปติดตั้งแล้วหรือไม่
+
+**ลายเซ็น**
+
+```typescript
+d.IsAppInstalled(package: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name |
+
+**คืนค่า** `boolean` — True ถ้าติดตั้งแล้ว
+
+---
+
+### d.ClearDataApp
+
+ล้างข้อมูลแอป
+
+**ลายเซ็น**
+
+```typescript
+d.ClearDataApp(package: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name |
+
+---
+
+### d.GetAppVersion
+
+ดึงเวอร์ชันของแอป
+
+**ลายเซ็น**
+
+```typescript
+d.GetAppVersion(package: string): string
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name |
+
+**คืนค่า** `string` — String เวอร์ชัน
+
+---
+
+### d.InstallApp
+
+ติดตั้งแอปจากไฟล์ APK
+
+**ลายเซ็น**
+
+```typescript
+d.InstallApp(apkPath: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `apkPath` | `string` | Path ไฟล์ APK |
+
+---
+
+### d.UninstallApp
+
+ถอนการติดตั้งแอป
+
+**ลายเซ็น**
+
+```typescript
+d.UninstallApp(package: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name |
+
+---
+
+### d.GetInfoApp
+
+ดึงข้อมูลแอป
+
+**ลายเซ็น**
+
+```typescript
+d.GetInfoApp(package: string): string
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name ของแอป |
+
+**คืนค่า** `string` — String ข้อมูลแอป
+
+---
+
+### d.GetListApps
+
+ดึงรายการ package ทั้งหมดบนอุปกรณ์
+
+**ลายเซ็น**
+
+```typescript
+d.GetListApps(): string[]
+```
+
+**คืนค่า** `string[]` — อาร์เรย์ package name
+
+---
+
+### d.GetListAppsInstalled
+
+ดึงรายการ package ที่ติดตั้ง (ไม่รวม system app)
+
+**ลายเซ็น**
+
+```typescript
+d.GetListAppsInstalled(): string[]
+```
+
+**คืนค่า** `string[]` — อาร์เรย์ package name
+
+---
+
+### d.GetCurrentActivity
+
+ดึง activity ที่อยู่ใน foreground
+
+**ลายเซ็น**
+
+```typescript
+d.GetCurrentActivity(): string
+```
+
+**คืนค่า** `string` — ชื่อ activity
+
+---
+
+### d.StartActivity
+
+เริ่ม Android activity
+
+**ลายเซ็น**
+
+```typescript
+d.StartActivity(activity: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `activity` | `string` | ชื่อ activity (เช่น "com.facebook.katana/.LoginActivity") |
+
+---
+
+## Facebook
+
+### d.OpenAppFB
+
+เปิดแอป Facebook ด้วย LoginActivity
+
+**ลายเซ็น**
+
+```typescript
+d.OpenAppFB(package: string, isKill?: boolean, timeout?: number): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `package` | `string` | Package name |
+| `isKill` | `boolean *(ไม่บังคับ)*` | ถ้า true จะ force close แอปก่อนเปิด (ค่าเริ่มต้น: false) |
+| `timeout` | `number *(ไม่บังคับ)*` | Timeout เป็นวินาทีรอแอปเปิด (ค่าเริ่มต้น: 0 = ไม่รอ) |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.OpenUrlSchemeFB
+
+เปิด URL scheme ในแอป Facebook (เช่น "fb://profile/123")
+
+**ลายเซ็น**
+
+```typescript
+d.OpenUrlSchemeFB(link: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `link` | `string` | URL scheme ที่จะเปิด |
+
+---
+
+### d.BackupAppFB
+
+Backup ข้อมูลแอป (ต้องการ root)
+
+**ลายเซ็น**
+
+```typescript
+d.BackupAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `folderPath` | `string` | โฟลเดอร์ที่บันทึก backup |
+| `fileNameWithoutExtension` | `string` | ชื่อไฟล์ backup โดยไม่มี extension |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+### d.RestoreAppFB
+
+Restore ข้อมูลแอปจาก backup (ต้องการ root)
+
+**ลายเซ็น**
+
+```typescript
+d.RestoreAppFB(folderPath: string, fileNameWithoutExtension: string): boolean
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `folderPath` | `string` | โฟลเดอร์ที่มี backup |
+| `fileNameWithoutExtension` | `string` | ชื่อไฟล์ backup โดยไม่มี extension |
+
+**คืนค่า** `boolean` — สถานะสำเร็จ
+
+---
+
+## ฟังก์ชัน Instagram
+
+### d.OpenUrlSchemeIG
+
+เปิด URL scheme ในแอป Instagram (เช่น "instagram://user?username=xxx")
+
+**ลายเซ็น**
+
+```typescript
+d.OpenUrlSchemeIG(link: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `link` | `string` | URL scheme ที่จะเปิด |
+
+---
+
+## Facebook Lite
+
+### d.OpenUrlSchemeFBLite
+
+เปิด URL scheme ในแอป Facebook Lite
+
+**ลายเซ็น**
+
+```typescript
+d.OpenUrlSchemeFBLite(link: string): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `link` | `string` | URL scheme ที่จะเปิด |
+
+---
+
+## ฟังก์ชันอื่น ๆ
+
+### d.Delay
+
+Delay execution
+
+**ลายเซ็น**
+
+```typescript
+d.Delay(delay: number): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `delay` | `number` | Delay in seconds |
+
+---
+
+### d.DelayRandom
+
+Delay random time
+
+**ลายเซ็น**
+
+```typescript
+d.DelayRandom(min: number, max: number): void
+```
+
+**พารามิเตอร์**
+
+| ชื่อ | ประเภท | คำอธิบาย |
+|------|------|-------------|
+| `min` | `number` | Minimum seconds |
+| `max` | `number` | Maximum seconds |
+
+---

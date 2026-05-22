@@ -1,0 +1,12 @@
+{
+  "name": "minautomate-js-docs-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Parse api_types.d.ts files and emit markdown API reference for MinAutomate JavaScript node",
+  "scripts": {
+    "build": "node generate-docs.js"
+  },
+  "dependencies": {
+    "typescript": "^5.4.0"
+  }
+}
